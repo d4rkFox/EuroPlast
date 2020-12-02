@@ -1,0 +1,34 @@
+$gray: #575757;
+$blue: #485bfa;
+$orange: #ffaa58;
+$orangeBg: #ffac5f;
+
+@mixin a700 {
+    font-family: 'AvenirNextCyr', sans-serif;
+    font-weight: 700;
+}
+
+@mixin a600 {
+    font-family: 'AvenirNextCyr', sans-serif;
+    font-weight: 600;
+}
+
+@mixin a400 {
+    font-family: 'AvenirNextCyr', sans-serif;
+    font-weight: 400;
+}
+
+@mixin b700 {
+    font-family: 'BebasNeue', sans-serif;
+    font-weight: 700;
+}
+
+@mixin trColor {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@mixin img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

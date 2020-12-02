@@ -1,0 +1,12 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+.vs
+
+app/js/*min.js
+app/*.html
+css/
+dist/
+node_modules/
+package-lock.json
+yarn.lock

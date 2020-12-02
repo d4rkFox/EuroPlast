@@ -1,0 +1,48 @@
+@import "fonts";
+@import "vars";
+@import "global";
+
+//start header===================================================================================
+.header {
+    background-image: url(../images/typical-bg.jpg);
+}
+
+//end header=====================================================================================
+
+.packages {
+    padding-top: 50px;
+
+    &__title {
+        padding-bottom: 8px;
+        font-size: 20px;
+        line-height: 28px;
+        @include a700;
+        border-bottom: 2px solid #141414;
+    }
+
+    &__inner {}
+}
+
+.sort {
+
+    &__btn {
+        height: 35px;
+        padding: 0 20px;
+        font-size: 13px;
+        color: #575757;
+        background-color: #d3d8ff;
+        border-radius: 20px;
+        @include trColor;
+        &+&{
+            margin-left: 10px;
+        }
+
+        &--active,
+        &:hover {
+            color: #fff;
+            background-color: $blue;
+        }
+    }
+}
+
+@import "media";

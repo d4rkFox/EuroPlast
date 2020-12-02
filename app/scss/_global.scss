@@ -1,0 +1,1120 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    position: relative;
+}
+
+body {
+    position: relative;
+    min-width: 320px;
+    font-size: 15px;
+    line-height: 19px;
+    @include a400;
+    color: #141414;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+}
+
+.container {
+    max-width: 1210px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.anchor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+// breadcrumbs=====================================================================================
+.breadcrumbs {
+    &__text {
+        position: relative;
+        padding: 20px 0;
+        font-size: 13px;
+        color: #afafaf;
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 18px;
+            width: 95%;
+            height: 1px;
+            background-color: #afafaf;
+        }
+
+        &:last-child::after {
+            height: 0;
+        }
+
+        &+& {
+            margin-left: 30px;
+
+            &::before {
+                position: absolute;
+                left: -20px;
+                content: '>';
+            }
+        }
+    }
+}
+
+//end breadcrumbs=====================================================================================
+
+//start header===================================================================================
+.header {
+    padding-top: 15px;
+    background-image: url(../images/header-bg.jpg);
+    @include img;
+
+    &__top {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68.5px;
+        padding-bottom: 15px;
+    }
+
+    &__address {
+        flex-basis: 195px;
+        margin-right: 15px;
+        margin-left: 127px;
+        font-size: 13px;
+        color: $gray;
+    }
+
+    &__wrapper-text {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: 63px;
+        font-size: 14px;
+        color: $gray;
+    }
+
+    &__text--bold {
+        @include a700;
+    }
+
+    &__feedback {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: auto;
+        margin-left: 54px;
+    }
+
+    &__search-icon {
+        transition: stroke 0.3s;
+    }
+
+    &__search-handle {
+        transition: fill 0.3s;
+    }
+
+    &__search {
+        &:hover {
+            .header__search-icon {
+                stroke: $orange;
+            }
+
+            .header__search-handle {
+                fill: $orange;
+            }
+        }
+
+        &--off {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    &__center {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+    }
+
+    &__nav {
+        flex-basis: 945px;
+        padding-right: 26px;
+        font-size: 14px;
+        letter-spacing: 2.1px;
+        @include a600;
+        border-top: 1px solid #e2e2e2;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-transform: uppercase;
+        list-style: none;
+    }
+
+    &__icon {
+        margin-top: -5px;
+        transition: fill 0.3s;
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        padding: 16px 0;
+        border-bottom: 1px solid transparent;
+        @include trColor;
+
+        &::before {
+            position: absolute;
+            bottom: -2px;
+            width: 95%;
+            height: 1px;
+            content: '';
+            transition: background-color 0.3s;
+        }
+
+        &:hover {
+            color: $blue;
+
+            .header__icon {
+                fill: $blue;
+            }
+        }
+
+        &:hover::before {
+            background-color: $blue;
+        }
+    }
+
+    &__icon-plus {
+        margin-right: 5px;
+        transition: fill 0.3s;
+    }
+
+    &__calculating {
+        position: relative;
+        display: block;
+        padding: 16px 29px 15px 30px;
+        font-size: 16px;
+        @include a700;
+        color: #fff;
+        background-color: $blue;
+        border-radius: 3px;
+        @include trColor;
+
+        &:hover {
+            color: #363636;
+            background-color: $orange;
+
+            .header__icon-plus {
+                fill: #363636;
+            }
+        }
+    }
+
+    &__breadcrumbs {
+        margin-top: 15px;
+    }
+
+    &__bottom {
+        display: flex;
+        padding-top: 30px;
+    }
+
+    &__desc {
+        flex-basis: 490px;
+        padding-top: 25px;
+        padding-left: 18px;
+    }
+
+    &__title {
+        margin-bottom: 5px;
+        font-size: 45px;
+        line-height: 54px;
+        @include b700;
+        letter-spacing: 0.9px;
+    }
+
+    &__subtitle {
+        max-width: 486px;
+        margin-bottom: 55px;
+        line-height: 21px;
+    }
+
+    &--changed {
+        .header {
+            &__nav {
+                border: none;
+            }
+
+            &__bottom {
+                justify-content: space-between;
+            }
+
+            &__desc {
+                flex-basis: 569px;
+                padding-left: 0;
+            }
+
+            &__subtitle {
+                margin-bottom: 29px;
+            }
+        }
+    }
+}
+
+//end header=====================================================================================
+.notice {
+    position: relative;
+    padding: 14px 27px 14px 42px;
+    font-size: 15px;
+    line-height: 21px;
+    color: #575757;
+    background-color: #ffe7d1;
+    border-radius: 3px;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 21px;
+        width: 8px;
+        height: 30px;
+        content: '';
+        background-image: url(../images/exclamation.svg);
+        @include img;
+        transform: translateY(-50%);
+    }
+
+    &__text {
+        @include a600;
+    }
+}
+
+//start search=====================================================================================
+.search {
+    position: absolute;
+    top: 0;
+    right: 47px;
+    z-index: 1;
+    width: 100%;
+    max-width: 901px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__input {
+        width: 100%;
+        height: 50px;
+        padding-right: 30px;
+        padding-left: 23px;
+        border: 2px solid #e2e2e2;
+
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: none;
+        padding: 10px 23px;
+        list-style: none;
+        background-color: #fff;
+        border-right: 2px solid #e2e2e2;
+        border-bottom: 2px solid #e2e2e2;
+        border-left: 2px solid #e2e2e2;
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        padding: 9.5px 0;
+        font-size: 16px;
+        @include a600;
+        color: $blue;
+        transition: color 0.3s;
+
+        &::before {
+            position: absolute;
+            bottom: 6px;
+            width: 100%;
+            height: 1px;
+            content: '';
+            background-color: $blue;
+            transition: background-color 0.3s;
+        }
+
+        &:hover {
+            color: $orange;
+        }
+
+        &:hover::before {
+            background-color: $orange;
+        }
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 11px;
+        right: -47px;
+    }
+}
+
+//end search=====================================================================================
+//start phone=====================================================================================
+.phone {
+    font-size: 16px;
+    @include a700;
+}
+
+//end phone=======================================================================================
+
+//start btn-link=================================================================================
+.btn-link {
+    padding: 15px 39px;
+    font-size: 16px;
+    @include a700;
+    background-color: $orangeBg;
+    border-radius: 3px;
+    @include trColor;
+
+    &:hover {
+        color: #fff;
+        background-color: $blue;
+    }
+}
+
+//end btn-link=================================================================================
+//start btn-modal=================================================================================
+.btn-modal {
+    font-size: 16px;
+    @include a600;
+    color: $blue;
+    border-bottom: 2px solid $blue;
+    transition: color 0.3s, border-bottom 0.3s;
+
+    &:hover {
+        border-bottom: 2px solid $orange;
+        color: $orange;
+    }
+
+    &--orange {
+        color: $orangeBg;
+        border-bottom: 2px solid $orange;
+    }
+
+    &--small {
+        font-size: 15px;
+        border-width: 1px;
+    }
+}
+
+//end btn-modal===================================================================================
+
+//start title===================================================================================
+.title {
+    font-size: 40px;
+    line-height: 56px;
+    @include b700;
+
+    &__arrow {
+        position: absolute;
+        top: 12px;
+        right: 0;
+        transition: fill 0.3s;
+    }
+
+    &__inner {
+        position: relative;
+        display: inline-block;
+
+        &:hover {
+            .title__arrow {
+                fill: $orange;
+            }
+        }
+    }
+
+    &--blue {
+        position: relative;
+        z-index: 3;
+        margin-right: 20px;
+        color: $blue;
+        transition: color 0.3s;
+
+        &::before {
+            position: absolute;
+            bottom: 6px;
+            width: 100%;
+            height: 1px;
+            content: '';
+            background-color: $blue;
+            transition: background-color 0.3s;
+        }
+
+        &:hover {
+            color: $orange;
+
+            &::before {
+                background-color: $orange;
+            }
+        }
+    }
+}
+
+//end title=====================================================================================
+//start card===================================================================================
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 236px;
+    padding: 26px 0;
+    color: #fff;
+    background-color: $blue;
+    @include trColor;
+
+    &:hover {
+        color: #141414;
+        background-color: $orangeBg;
+    }
+
+    &__img {
+        margin-top: auto;
+    }
+
+    &__title {
+        font-size: 16px;
+        margin-top: auto;
+    }
+
+    &__text {
+        margin-top: auto;
+        font-size: 45px;
+        @include b700;
+    }
+}
+
+//end card===================================================================================
+//start benefits================================================================================
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+
+    &__card {
+        max-width: 285px;
+        margin-bottom: 35px;
+    }
+
+    &__title {
+        position: relative;
+        max-width: 213px;
+        padding-top: 49px;
+        padding-bottom: 15px;
+        font-size: 16px;
+        line-height: 22.4px;
+        @include a700;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+        }
+
+        &--triangle::before {
+            width: 34px;
+            height: 36px;
+            background-image: url(../images/icon-triangle.svg);
+        }
+
+        &--gear::before {
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/icon-gear.svg);
+        }
+
+        &--around::before {
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/icon-around.svg);
+        }
+
+        &--timer::before {
+            width: 31px;
+            height: 31px;
+            background-image: url(../images/icon-timer.svg);
+        }
+
+    }
+
+    &__text {
+        max-width: 271px;
+        padding-top: 15px;
+        line-height: 21px;
+        color: #575757;
+        border-top: 2px solid #141414;
+    }
+}
+
+//end benefits===================================================================================
+
+//start footer====================================================================================
+.footer {
+    padding: 58px 0 51px;
+    color: #fff;
+    background-color: #141414;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col {
+        max-width: 288px;
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 12.6px;
+    }
+
+    &__copy-text {
+        margin-top: 33px;
+        font-size: 14px;
+        line-height: 16.8px;
+        color: #575757;
+    }
+
+    &__nav {
+        width: 100%;
+        max-width: 442px;
+        padding-top: 5px;
+    }
+
+    &__list {
+        list-style: none;
+        column-count: 2;
+        column-gap: 0;
+    }
+
+    &__list-item {
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        padding: 10px 0;
+        font-size: 14px;
+        line-height: 16.8px;
+        @include a600;
+        text-transform: uppercase;
+        letter-spacing: 2.1px;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $orangeBg;
+        }
+    }
+
+    &__arrow {
+        margin-left: 5px;
+        transition: fill 0.3s;
+    }
+
+    &__btn {
+        font-size: 14px;
+        line-height: 16.8px;
+        @include a600;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2.1px;
+        white-space: nowrap;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $orangeBg;
+        }
+    }
+
+    &__btn-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        &:hover .footer__arrow {
+            fill: $blue;
+        }
+
+        &:hover .btn-modal {
+            color: $blue;
+            border-bottom: 2px solid $blue;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 10px;
+        max-width: 236px;
+    }
+}
+
+//end footer======================================================================================
+//start text======================================================================================
+.text {
+    font-size: 13px;
+    line-height: 18.2px;
+    color: #afafaf;
+
+    &:nth-child(even) {
+        margin-bottom: 5px;
+    }
+
+    &--darkgray {
+        display: inline-block;
+        margin-top: 32px;
+        font-size: 14px;
+        line-height: 16.8px;
+        color: #575757;
+        border-bottom: 1px solid #575757;
+        transition: border-bottom 0.3s, color 0.3s;
+
+        &:hover {
+            color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+    }
+}
+
+//end text======================================================================================
+//start feedback======================================================================================
+.feedback {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background-color: rgba(#000, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__close {
+        position: absolute;
+        top: 16px;
+        right: 30px;
+        width: 44px;
+        height: 44px;
+        padding: 9px;
+        cursor: pointer;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__inner {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        max-width: 555px;
+        opacity: 0;
+        transition: top 0.3s, opacity 0.5s;
+        transform: translate(-50%, -50%);
+
+        &--active {
+            top: 50%;
+            opacity: 1;
+        }
+
+        &--large {
+            max-width: 756px;
+            transform: translate(-50%, -50%) scale(0.75);
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 92px 38px;
+        background-color: #f5f5f5;
+    }
+
+    &__input {
+        max-width: 370px;
+        margin-bottom: 10px;
+    }
+
+    &__textarea {
+        margin-bottom: 20px;
+    }
+}
+
+//end feedback======================================================================================
+//title modal feedback======================================================================================
+.modal-title {
+    padding: 13px 5px 6px;
+    font-size: 40px;
+    line-height: 56px;
+    @include b700;
+    color: #fff;
+    text-align: center;
+    background-color: #575757;
+}
+
+//end title modal feedback======================================================================================
+// modal feedback======================================================================================
+.modal-btn {
+    display: block;
+    padding: 14px 16px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    @include a700;
+    background-color: $orangeBg;
+    border-radius: 3px;
+    @include trColor;
+
+    &:hover {
+        color: #fff;
+        background-color: $blue;
+    }
+}
+
+//end modal feedback======================================================================================
+//modal input======================================================================================
+
+.input {
+    height: 50px;
+    padding: 0 23px;
+    border: 2px solid #e2e2e2;
+
+    &::placeholder {
+        font-size: 15px;
+        line-height: 21px;
+        color: #575757;
+    }
+
+    &--big {
+        width: 100%;
+        max-width: 282px;
+        margin-bottom: 6px;
+    }
+}
+
+//end modal input======================================================================================
+// modal textarea======================================================================================
+.textarea {
+    max-width: 370px;
+    height: 130px;
+    padding-top: 15px;
+    padding-left: 23px;
+    resize: none;
+    border: 2px solid #e2e2e2;
+
+    &::placeholder {
+        font-size: 15px;
+        line-height: 21px;
+        color: #575757;
+    }
+
+    &--big {
+        width: 100%;
+        max-width: 571px;
+        margin-bottom: 19px;
+    }
+}
+
+//end modal textarea======================================================================================
+
+// modal checkbox======================================================================================
+.checkbox-label {
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 19.6px;
+    color: #575757;
+    cursor: pointer;
+
+    &::before {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '';
+        background-color: #fff;
+        border: 2px solid #e2e2e2;
+        border-radius: 3px;
+    }
+
+    &--big {
+        padding-top: 6px;
+        padding-left: 39px;
+        font-size: 13px;
+
+        &::before {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.checkbox {
+    display: none;
+
+    &:checked+.checkbox-label::before {
+        background-image: url(../images/check.png);
+        background-repeat: no-repeat;
+        background-color: $orangeBg;
+        background-position: center;
+        border-color: #575757;
+        transition: background-color 0.3s;
+    }
+}
+
+//end modal checkbox======================================================================================
+
+//end modal link======================================================================================
+.link-modal {
+    position: relative;
+    display: inline-block;
+    color: $blue;
+    transition: color 0.3s;
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        content: '';
+        background-color: $blue;
+        transition: background-color 0.3s;
+    }
+
+    &:hover {
+        color: $orange;
+    }
+
+    &:hover::before {
+        background-color: $orange;
+    }
+}
+
+//modal link=====================================================================================
+
+//modal calc======================================================================================
+.calc {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    font-size: 13px;
+    color: #575757;
+
+    &__wrapper {
+        padding: 24px 93px 0;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #e2e2e2;
+
+        &--checkbox {
+            justify-content: flex-start;
+            column-gap: 35px;
+            padding-bottom: 30px;
+            border: none;
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 135px;
+        line-height: 18.2px;
+    }
+
+    &__input-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: 0 10px;
+        margin-top: 4px;
+    }
+
+    &__print {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    &__print-inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7px;
+        color: #b6b6b6;
+
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 93px 29px;
+        background-color: #e2e2e2;
+    }
+}
+
+//end modal calc======================================================================================
+
+//modal select======================================================================================
+.select {
+    position: relative;
+
+    &__inner {
+        padding: 0 23px;
+    }
+
+    &:first-child {
+        width: 100%;
+        max-width: 240px;
+
+        .select__inner {
+            width: 100%;
+            max-width: 240px;
+            padding-left: 15px;
+        }
+    }
+
+    &:nth-child(even) {
+        width: 100%;
+        max-width: 130px;
+
+        .select__inner {
+            width: 100%;
+            max-width: 130px;
+        }
+    }
+
+    &:last-child {
+        width: 100%;
+        max-width: 180px;
+
+        .select__inner {
+            width: 100%;
+            max-width: 180px;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 20px;
+        height: 10px;
+        content: '';
+        background-image: url(../images/icon-arrowDown.svg);
+        background-repeat: no-repeat;
+        @include img;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    &__inner {
+        height: 46px;
+        padding-left: 20px;
+        appearance: none !important;
+        background-color: #d5d5d5;
+        border: 1px solid #cfcfcf;
+        border-radius: 3px;
+    }
+}
+
+//end modal select======================================================================================
+
+.packages-item {
+
+&__img {}
+
+&__title {}
+
+&__desc {}
+
+&__text {}
+}
+
+.btn-link {}

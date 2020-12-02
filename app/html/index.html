@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../components/_head.html')
+<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <form class="header__form search">
+                    <input class="search__input" type="search" placeholder="Что вас интересует?">
+                    <ul class="search__list">
+                        <li class="search__item">
+                            <a class="search__link" href="#">
+                                Как оформить заказ
+                            </a>
+                        </li>
+                        <li class="search__item">
+                            <a class="search__link" href="#">
+                                Какие сертифкаты мы предоставляем
+                            </a>
+                        </li>
+                        <li class="search__item">
+                            <a class="search__link" href="#">
+                                Какой максимальный объем продукции мы можем взять на производство
+                            </a>
+                        </li>
+                        <li class="search__item">
+                            <a class="search__link" href="#">
+                                Оборудование каких производителей мы используем
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="search__btn-close">
+                        <img class="search__close" src="images/close.svg" alt="close">
+                    </button>
+                </form>
+                <a class="header__logo logo" href="">
+                    <img class="logo__img" src="images/logo.png" alt="logo">
+                </a>
+                <div class="header__address">
+                    Санкт-Петербург, Дальневосточный пр. 13/3
+                </div>
+                <div class="header__wrapper-text">
+                    <span class="header__text">
+                        <span class="header__text--bold">
+                            Отдел продаж:
+                        </span>
+                        Пн-Пт с 9:00 до
+                        17:00
+                    </span>
+                    <span class="header__text">
+                        <span class="header__text--bold">
+                            Склад:
+                        </span>
+                        Пн-Пт с 9:30 до 16:30
+                    </span>
+                </div>
+
+                <div class="header__feedback">
+                    <a class="phone" href="tel:+78124263766">
+                        8 (812) 426-37-66
+                    </a>
+                    <button class="btn-modal">
+                        Обратная связь
+                    </button>
+                </div>
+                <button class="header__search" type="search">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="header__search-icon"
+                            d="M13.0938 1.49931C19.4842 1.49931 24.6719 6.69573 24.6719 13.1149C24.6719 19.534 19.4842 24.7305 13.0938 24.7305C6.70337 24.7305 1.51562 19.534 1.51562 13.1149C1.51562 6.69573 6.70337 1.49931 13.0938 1.49931Z"
+                            stroke="#485BFA" stroke-width="3" />
+                        <path class="header__search-handle"
+                            d="M28.9551 28.063C29.54 28.6497 30.4898 28.651 31.0764 28.0661C31.663 27.4811 31.6644 26.5314 31.0794 25.9448L28.9551 28.063ZM21.262 20.348L28.9551 28.063L31.0794 25.9448L23.3864 18.2297L21.262 20.348Z"
+                            fill="#485BFA" />
+                    </svg>
+                </button>
+            </div>
+            <div class="header__center">
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list-item">
+                            <a class="header__link" href="#">
+                                <svg width="12" height="11" viewBox="0 0 12 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="header__icon" x="0.015625" width="4" height="4" fill="#141414" />
+                                    <rect class="header__icon" x="7.01562" width="4" height="4" fill="#141414" />
+                                    <rect class="header__icon" x="0.015625" y="7" width="4" height="4" fill="#141414" />
+                                    <rect class="header__icon" x="7.01562" y="7" width="4" height="4" fill="#141414" />
+                                </svg>
+                                Продукция
+                            </a>
+                        </li>
+                        <li class="header__list-item"><a class="header__link" href="#">О компании</a></li>
+                        <li class="header__list-item"><a class="header__link" href="#">Производство</a></li>
+                        <li class="header__list-item"><a class="header__link" href="#">Как выбрать?</a></li>
+                        <li class="header__list-item"><a class="header__link" href="#">Новости</a></li>
+                        <li class="header__list-item"><a class="header__link" href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <button class="header__calculating btn-calc">
+                    <svg class="header__icon-plus" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="header__icon-plus" x="0.015625" y="5" width="12" height="2" fill="white" />
+                        <rect class="header__icon-plus" x="7.01562" width="12" height="2"
+                            transform="rotate(90 7.01562 0)" fill="white" />
+                    </svg>
+                    Расчёт стоимости
+                </button>
+
+            </div>
+            <div class="header__bottom">
+                <img class="header__img" src="images/packages.png" alt="package">
+                <div class="header__desc">
+                    <h1 class="header__title">
+                        Пакеты с логотипом напрямую от производителя в Санкт-Петербурге
+                    </h1>
+                    <div class="header__subtitle">
+                        Помогаем новым брендам быстро заявить о себе,
+                        <br>
+                        а уже раскрученным — еще больше повысить
+                        узнаваемость!
+                    </div>
+                    <a class="btn-link" href="#">
+                        Узнать больше
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <main class="main">
+        <!-- start products -->
+        <section class="products">
+            <div class="container">
+
+                <h4 class="title">
+                    Основная
+                    <div class="title__inner">
+                        <a class="title--blue" href="#">
+                            продукция
+
+                        </a>
+                        <svg class="title__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="title__arrow"
+                                d="M0.292893 10.2929C-0.0976311 10.6834 -0.0976311 11.3166 0.292893 11.7071C0.683417 12.0976 1.31658 12.0976 1.70711 11.7071L0.292893 10.2929ZM12 1C12 0.447715 11.5523 0 11 0H2C1.44772 0 1 0.447715 1 1C1 1.55228 1.44772 2 2 2H10V10C10 10.5523 10.4477 11 11 11C11.5523 11 12 10.5523 12 10V1ZM1.70711 11.7071L6.36228 7.05193L4.94807 5.63772L0.292893 10.2929L1.70711 11.7071ZM6.36228 7.05193L11.7071 1.70711L10.2929 0.292893L4.94807 5.63772L6.36228 7.05193Z"
+                                fill="#485BFA" />
+                        </svg>
+                    </div>
+                    компании
+                </h4>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-1.png" alt="Полиэтиленовая пленка">
+                            <h6 class="card__title">
+                                Полиэтиленовая пленка
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-2.png" alt="Пакеты «Майка»">
+                            <h6 class="card__title">
+                                Пакеты «Майка»
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-3.png" alt="Пакеты с прорубной ручкой">
+                            <h6 class="card__title">
+                                Пакеты с прорубной ручкой
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-4.png" alt="Фасовочные пакеты">
+                            <h6 class="card__title">
+                                Фасовочные пакеты
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-5.png" alt="Пакеты для колес">
+                            <h6 class="card__title">
+                                Пакеты для колес
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-6.png" alt="Мешки для мусора">
+                            <h6 class="card__title">
+                                Мешки для мусора
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-7.png" alt="Пакеты для медотходов">
+                            <h6 class="card__title">
+                                Пакеты для медотходов
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-8.png" alt="Вкладыши в короба">
+                            <h6 class="card__title">
+                                Вкладыши в короба
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-9.png" alt="Пакеты для хранения одежды">
+                            <h6 class="card__title">
+                                Пакеты для хранения одежды
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-10.png" alt="Пакеты с перфорацией">
+                            <h6 class="card__title">
+                                Пакеты с перфорацией
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-11.png" alt="Типовые пакеты">
+                            <h6 class="card__title">
+                                Типовые пакеты
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <div class="card__text">%</div>
+                            <h6 class="card__title">
+                                Спецпредложения
+                            </h6>
+                        </a>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev">
+                        <svg class="swiper-arrow" width="17" height="30" viewBox="0 0 17 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="swiper-arrow" d="M16 1L2 15L16 29" stroke="#E2E2E2" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg class="swiper-arrow" width="17" height="30" viewBox="0 0 17 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="swiper-arrow" d="M1 29L15 15L1 0.999998" stroke="#E2E2E2" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end products -->
+
+        <!-- start service -->
+        <section class="service">
+            <div class="container">
+                <div class="service__inner">
+                    <div class="service__inner-title">
+                        <h4 class="title">
+                            Высокий уровень обслуживания и индивидуальный подход к каждому клиенту — часть нашего
+                            сервиса
+                        </h4>
+                        <a class="service__link" href="#">
+                            Как выбрать пакеты?
+                        </a>
+                    </div>
+                    <div class="benefits">
+                        <div class="benefits__card">
+                            <h5 class="benefits__title benefits__title--triangle">
+                                Сертифицированные материалы
+                            </h5>
+                            <p class="benefits__text">
+                                В производстве используются сертифицированные материалы, что обеспечивает безопасность
+                                продукции.
+                            </p>
+                        </div>
+                        <div class="benefits__card">
+                            <h5 class="benefits__title benefits__title--gear">
+                                Собственное производство
+                            </h5>
+                            <p class="benefits__text">
+                                Для того, чтобы гарантировать качество самого высокого уровня, регулярно занимаемся
+                                внедрением инновационных технологий.
+                            </p>
+                        </div>
+                        <div class="benefits__card">
+                            <h5 class="benefits__title benefits__title--around">
+                                Биоразлагаемая продукция
+                            </h5>
+                            <p class="benefits__text">
+                                Помогаем существенно снижать вредное воздействие на окружающую среду в процессе
+                                утилизации пакетов.
+                            </p>
+                        </div>
+                        <div class="benefits__card">
+                            <h5 class="benefits__title benefits__title--timer">
+                                Оперативное выполнение заказов
+                            </h5>
+                            <p class="benefits__text">
+                                С большой ответственностью подходим к оговоренным срокам. Наши клиенты могут быть
+                                спокойны, заказ будет готов вовремя.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end service -->
+
+        <!-- start production -->
+        <section class="production">
+            <div class="container">
+                <div class="production__inner">
+                    <div class="production__wrapper-img">
+                        <img class="production__img" src="images/content/production.jpg" alt="production">
+                        <div class="production__info">
+                            <div class="production__num">
+                                130+
+                            </div>
+                            <div class="production__text production__text--white">
+                                тонн продукции изготавливается ежемесячно
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production__desc">
+                        <h4 class="production__title title">
+                            «Европласт» крупное производственное
+                            <div class="title__inner">
+                                <a class="title--blue" href="#">
+                                    предприятие
+                                </a>
+                                <svg class="title__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="title__arrow"
+                                        d="M0.292893 10.2929C-0.0976311 10.6834 -0.0976311 11.3166 0.292893 11.7071C0.683417 12.0976 1.31658 12.0976 1.70711 11.7071L0.292893 10.2929ZM12 1C12 0.447715 11.5523 0 11 0H2C1.44772 0 1 0.447715 1 1C1 1.55228 1.44772 2 2 2H10V10C10 10.5523 10.4477 11 11 11C11.5523 11 12 10.5523 12 10V1ZM1.70711 11.7071L6.36228 7.05193L4.94807 5.63772L0.292893 10.2929L1.70711 11.7071ZM6.36228 7.05193L11.7071 1.70711L10.2929 0.292893L4.94807 5.63772L6.36228 7.05193Z"
+                                        fill="#485BFA" />
+                                </svg>
+                            </div>
+                        </h4>
+                        <p class="production__text">
+                            Компания «Европласт» основана в 2002 году. За это время фирма смогла стать одним из
+                            лидирующих предприятий в этой отрасли, постоянно расширяя ассортимент и производственные
+                            мощности, повышая экологические и иные стандарты до европейского уровня, закупая импортное
+                            оборудование и активно внедряя в производство пакетов новые разработки и технологии.
+                        </p>
+
+                        <p class="production__text production__text--bold">
+                            Нашими клиентами уже являются крупные аптечные сети, автодилеры, производственные компании,
+                            медицинские центрыи другие российские предприятия.
+                        </p>
+                        <div class="production__clients clients">
+                            <img class="clients__img" src="images/content/clients-1.png" alt="АптекаЛекрус">
+                            <img class="clients__img" src="images/content/clients-2.png" alt="TIKKURILA">
+                            <img class="clients__img" src="images/content/clients-3.png" alt="РЖД">
+                            <img class="clients__img" src="images/content/clients-4.png" alt="КЕЙ">
+                            <img class="clients__img" src="images/content/clients-5.png" alt="WURTH">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end production -->
+
+        <!-- start guarantees -->
+        <section class="guarantees">
+            <div class="container">
+                <div class="guarantees__inner">
+                    <div class="guarantees__inner-title">
+                        <h4 class="title">
+                            надежное оборудование гарантирует беспрерывное
+                            <div class="title__inner">
+                                <a class="title--blue" href="#">
+                                    производство
+                                </a>
+                                <svg class="title__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="title__arrow"
+                                        d="M0.292893 10.2929C-0.0976311 10.6834 -0.0976311 11.3166 0.292893 11.7071C0.683417 12.0976 1.31658 12.0976 1.70711 11.7071L0.292893 10.2929ZM12 1C12 0.447715 11.5523 0 11 0H2C1.44772 0 1 0.447715 1 1C1 1.55228 1.44772 2 2 2H10V10C10 10.5523 10.4477 11 11 11C11.5523 11 12 10.5523 12 10V1ZM1.70711 11.7071L6.36228 7.05193L4.94807 5.63772L0.292893 10.2929L1.70711 11.7071ZM6.36228 7.05193L11.7071 1.70711L10.2929 0.292893L4.94807 5.63772L6.36228 7.05193Z"
+                                        fill="#485BFA" />
+                                </svg>
+                            </div>
+                            <br>
+                            даже при больших объемах заказа
+                        </h4>
+                        <p class="guarantees__text">
+                            Мы решили использовать только качественную продукцию от ведущих производителей. Поэтому у
+                            нас
+                            применяется оборудование компаний Эксимпак, HEMINGSTONE, ЗИМАК ГРУПП.
+                        </p>
+                    </div>
+                    <div class="benefits__wrapper">
+                        <div class="benefits">
+                            <img class="benefits__img" src="images/num-6.png" alt="6">
+                            <p class="benefits__text">
+                                Сварочных машин для полной линейки производства пакетов
+                            </p>
+                        </div>
+                        <div class="benefits">
+                            <img class="benefits__img" src="images/num-9.png" alt="9">
+                            <p class="benefits__text">
+                                Экструдеров для изготовления пленки шириной до 120 см
+                            </p>
+                        </div>
+                        <div class="benefits">
+                            <img class="benefits__img" src="images/num-2.png" alt="2">
+                            <p class="benefits__text">
+                                Флексопечатные машины для нанесения рисунков и логотипов
+                            </p>
+                        </div>
+                        <div class="benefits">
+
+                            <span class="benefits__plus">
+                                +
+                            </span>
+
+                            <p class="benefits__text">
+                                Специальное оборудование для качественной вырубки ручек на пакетах
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end guarantees -->
+
+        <!-- start news -->
+        <section class="news">
+            <div class="container">
+                <h4 class="title">
+                    Актуальные
+                    <div class="title__inner">
+                        <a class="title--blue" href="#">
+                            новости
+                        </a>
+                        <svg class="title__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="title__arrow"
+                                d="M0.292893 10.2929C-0.0976311 10.6834 -0.0976311 11.3166 0.292893 11.7071C0.683417 12.0976 1.31658 12.0976 1.70711 11.7071L0.292893 10.2929ZM12 1C12 0.447715 11.5523 0 11 0H2C1.44772 0 1 0.447715 1 1C1 1.55228 1.44772 2 2 2H10V10C10 10.5523 10.4477 11 11 11C11.5523 11 12 10.5523 12 10V1ZM1.70711 11.7071L6.36228 7.05193L4.94807 5.63772L0.292893 10.2929L1.70711 11.7071ZM6.36228 7.05193L11.7071 1.70711L10.2929 0.292893L4.94807 5.63772L6.36228 7.05193Z"
+                                fill="#485BFA" />
+                        </svg>
+                    </div>
+                    компании
+                </h4>
+                <div class="news__inner">
+                    <article class="news-card">
+                        <time class="news-card__date" datetime="2020-05-07">
+                            7 мая 2020
+                        </time>
+                        <h4 class="news-card__title">
+                            С Днем Победы!
+                        </h4>
+                        <p class="news-card__text">
+                            Компания «Европласт» поздравляет Вас с самым величественным и трогательным праздником в году
+                            – Днем Победы. ...
+                        </p>
+                        <a class="news-card__link" href="#">
+                            Читать далее
+                        </a>
+                    </article>
+                    <article class="news-card">
+                        <time class="news-card__date" datetime="2020-05-07">
+                            7 мая 2020
+                        </time>
+                        <h4 class="news-card__title">
+                            С Днем Победы!
+                        </h4>
+                        <p class="news-card__text">
+                            Компания «Европласт» поздравляет Вас с самым величественным и трогательным праздником в году
+                            – Днем Победы. ...
+                        </p>
+                        <a class="news-card__link" href="#">
+                            Читать далее
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- end news -->
+    </main>
+    @@include('../components/_footer.html')
+
+    @@include('../components/_scripts.html')
+</body>
+
+</html>
