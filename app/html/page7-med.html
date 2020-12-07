@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../components/_head.html')
+<link rel="stylesheet" href="css/product.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header header--increased">
+        <div class="container">
+            <div class="header__top">
+                <form class="header__form search">
+                    <input class="search__input" type="search" placeholder="Что вас интересует?">
+                    <ul class="search__list">
+                        <li class="search__item">
+                            <a class="search__link" href="#">
+                                Как оформить заказ
+                            </a>
+                        </li>
+                        <li class="search__item">
+                            <a class="search__link" href="#">
+                                Какие сертифкаты мы предоставляем
+                            </a>
+                        </li>
+                        <li class="search__item">
+                            <a class="search__link" href="#">
+                                Какой максимальный объем продукции мы можем взять на производство
+                            </a>
+                        </li>
+                        <li class="search__item">
+                            <a class="search__link" href="#">
+                                Оборудование каких производителей мы используем
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="search__btn-close">
+                        <img class="search__close" src="images/close.svg" alt="close">
+                    </button>
+                </form>
+                <a class="header__logo logo" href="">
+                    <img class="logo__img" src="images/logo.png" alt="logo">
+                </a>
+                <div class="header__address">
+                    Санкт-Петербург, Дальневосточный пр. 13/3
+                </div>
+                <div class="header__wrapper-text">
+                    <span class="header__text">
+                        <span class="header__text--bold">
+                            Отдел продаж:
+                        </span>
+                        Пн-Пт с 9:00 до
+                        17:00
+                    </span>
+                    <span class="header__text">
+                        <span class="header__text--bold">
+                            Склад:
+                        </span>
+                        Пн-Пт с 9:30 до 16:30
+                    </span>
+                </div>
+
+                <div class="header__feedback">
+                    <a class="phone" href="tel:+78124263766">
+                        8 (812) 426-37-66
+                    </a>
+                    <button class="btn-modal">
+                        Обратная связь
+                    </button>
+                </div>
+                <button class="header__search" type="search">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="header__search-icon"
+                            d="M13.0938 1.49931C19.4842 1.49931 24.6719 6.69573 24.6719 13.1149C24.6719 19.534 19.4842 24.7305 13.0938 24.7305C6.70337 24.7305 1.51562 19.534 1.51562 13.1149C1.51562 6.69573 6.70337 1.49931 13.0938 1.49931Z"
+                            stroke="#485BFA" stroke-width="3" />
+                        <path class="header__search-handle"
+                            d="M28.9551 28.063C29.54 28.6497 30.4898 28.651 31.0764 28.0661C31.663 27.4811 31.6644 26.5314 31.0794 25.9448L28.9551 28.063ZM21.262 20.348L28.9551 28.063L31.0794 25.9448L23.3864 18.2297L21.262 20.348Z"
+                            fill="#485BFA" />
+                    </svg>
+                </button>
+            </div>
+            <div class="header__center">
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list-item">
+                            <a class="header__link" href="#">
+                                <svg width="12" height="11" viewBox="0 0 12 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="header__icon" x="0.015625" width="4" height="4" fill="#141414" />
+                                    <rect class="header__icon" x="7.01562" width="4" height="4" fill="#141414" />
+                                    <rect class="header__icon" x="0.015625" y="7" width="4" height="4" fill="#141414" />
+                                    <rect class="header__icon" x="7.01562" y="7" width="4" height="4" fill="#141414" />
+                                </svg>
+                                Продукция
+                            </a>
+                        </li>
+                        <li class="header__list-item"><a class="header__link" href="#">О компании</a></li>
+                        <li class="header__list-item"><a class="header__link" href="#">Производство</a></li>
+                        <li class="header__list-item"><a class="header__link" href="#">Как выбрать?</a></li>
+                        <li class="header__list-item"><a class="header__link" href="#">Новости</a></li>
+                        <li class="header__list-item"><a class="header__link" href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <button class="header__calculating btn-calc">
+                    <svg class="header__icon-plus" width="13" height="12" viewBox="0 0 13 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect class="header__icon-plus" x="0.015625" y="5" width="12" height="2" fill="white" />
+                        <rect class="header__icon-plus" x="7.01562" width="12" height="2"
+                            transform="rotate(90 7.01562 0)" fill="white" />
+                    </svg>
+                    Расчёт стоимости
+                </button>
+
+            </div>
+            <!-- breadcrumbs -->
+            <div class="header__breadcrumbs breadcrumbs">
+                <div class="container">
+                    <a class="breadcrumbs__text" href="#">
+                        Главная
+                    </a>
+                    <a class="breadcrumbs__text" href="#">
+                        Продукция
+                    </a>
+                    <span class="breadcrumbs__text">
+                        Пакеты для медотходов
+                    </span>
+                </div>
+            </div>
+            <!-- end breadcrumbs -->
+            <div class="header__bottom header__bottom--increased">
+                <img class="header__img header__img--center" src="images/content/med.png" alt="Пакеты для медотходов">
+                <div class="header__desc">
+                    <h1 class="header__title">
+                        Пакеты для медотходов
+                    </h1>
+                    <div class="header__cost">
+                        <div class="cost">
+                            от 1,8 руб.
+                            <span class="cost__text">
+                                Цена зависит от объёма
+                            </span>
+                            <img class="cost__img" src="images/cost-bg.svg" alt="cost-bg">
+                        </div>
+                        <div class="header__btn-wrapper">
+                            <button class="btn-modal btn-link">
+                                Сделать заказ
+                            </button>
+                            или
+                            <button class="btn-calc">
+                                Рассчитать стоимость
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header__table-title">
+                        Основные параметры
+                    </div>
+                    <div class="header__row">
+                        <span class="header__row-text header__row-text--bold">
+                            Ширина:
+                        </span>
+                        <span class="header__row-text">
+                            от 330 до 950 мм
+                        </span>
+                    </div>
+                    <div class="header__row">
+                        <span class="header__row-text header__row-text--bold">
+                            Высота:
+                        </span>
+                        <span class="header__row-text">
+                            от 300 до 1500 мм
+                        </span>
+                    </div>
+                    <div class="header__row">
+                        <span class="header__row-text header__row-text--bold">
+                            Печать:
+                        </span>
+                        <span class="header__row-text">
+                            от 1 до 4 цветов (<a class="header__row-link" href="#"> требуется клише</a>)
+                            <br>
+                            *все типовые пакеты с печатью
+                        </span>
+                        <div class="popup-help">
+                            ?
+                            <span class="popup-help__text">
+                                Текст всплывающего сообщения!
+                            </span>
+                        </div>
+                    </div>
+                    <div class="header__row">
+                        <span class="header__row-text header__row-text--bold">
+                            Материал и толщина:
+                        </span>
+                        <span class="header__row-inner">
+                            <span class="header__row-text">
+                                ПНД, толщина от 15 до 50 микрон;
+                            </span>
+                            <span class="header__row-text">
+                                ПВД, толщина от 30 до 100 микрон;
+                            </span>
+                        </span>
+                        <span class="popup-help">
+                            ?
+                            <span class="popup-help__text">
+                                Очень большой тескт всплывающего сообщения!
+                            </span>
+                        </span>
+                    </div>
+                    <div class="header__row header__row--inline">
+                        <span class="header__row-text header__row-text--bold">
+                            Типовые размеры:
+                        </span>
+                        <span class="header__row-inner">
+                            <span class="header__row-text header__row-text--bold">
+                                330*300
+                            </span>
+                            (6л),
+                            <span class="header__row-text header__row-text--bold">
+                                330*600
+                            </span>
+                            (10л),
+                            <span class="header__row-text header__row-text--bold">
+                                500*600
+                            </span>
+                            (30л),
+                            <span class="header__row-text header__row-text--bold">
+                                600*800
+                            </span>
+                            (60л),
+                            <span class="header__row-text header__row-text--bold">
+                                600*1000
+                            </span>
+                            (80л),
+                            <span class="header__row-text header__row-text--bold">
+                                700*800
+                            </span>
+                            (100л),
+                            <span class="header__row-text header__row-text--bold">
+                                700*1100
+                            </span>
+                            (120л),
+                            <span class="header__row-text header__row-text--bold">
+                                800*1100
+                            </span>
+                            (160л).
+                        </span>
+                    </div>
+                    <div class="header__row header__row--inline">
+                        <span class="header__row-text header__row-text--bold">
+                            Типовые размеры:
+                        </span>
+                        <span class="header__row-inner">
+                            <span class="header__row-text header__row-text--bold">
+                                А
+                            </span>
+                            (белый),
+                            <span class="header__row-text header__row-text--bold">
+                                Б
+                            </span>
+                            (желтый),
+                            <span class="header__row-text header__row-text--bold">
+                                В
+                            </span>
+                            (красный),
+                            <span class="header__row-text header__row-text--bold">
+                                Г
+                            </span>
+                            (черный)
+                        </span>
+                    </div>
+                    <div class="header__notice notice">
+                        Минимальный заказ на изготовление – от 100 кг. Типовые пакеты для медотходов есть в наличии на складе, минимальный заказ – от 1 упаковки.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--end header -->
+    <main class="main">
+        <!-- logo-order -->
+        <section class="logo-order">
+            <div class="container">
+                <div class="logo-order__inner">
+                    <div class="logo-order__desc">
+                        <h2 class="logo-order__title title">
+                            изготовим пакеты «Майка» с логотипом в сжатые сроки за демократичную цену
+                        </h2>
+                        <p class="logo-order__text">
+                            Рассчитаем предварительную стоимость и сроки, проконсультируем по выбору необходимых
+                            размеров, плотности полиэтилена и других характеристик, чтобы вы могли сделать оптимальный
+                            выбор для вашего бизнеса.
+                        </p>
+                        <ul class="logo-order__list">
+                            <li class="logo-order__item logo-order__item--draw">
+                                Возможны различные цвета плёнки
+                            </li>
+                            <li class="logo-order__item logo-order__item--around">
+                                Возможно использование биоразлагаемой добавки
+                            </li>
+                            <li class="logo-order__item logo-order__item--package">
+                                Возможно изготовление без нанесения рисунка
+                            </li>
+                        </ul>
+                        <div class="logo-order__wrapper-btn">
+                            <button class="logo-order__calculating btn-calc">
+                                Расчёт стоимости
+                            </button>
+                            <button class="logo-order__modal btn-modal">
+                                Заказать консультацию
+                            </button>
+                        </div>
+                    </div>
+                    <div class="logo-order__wrapper-img">
+                        <img class="logo-order__img logo-order__img--large" src="images/content/product-packages-1.jpg"
+                            alt="packages-1">
+                        <img class="logo-order__img" src="images/content/product-packages-2.jpg" alt="packages-2">
+                        <img class="logo-order__img" src="images/content/product-packages-3.jpg" alt="packages-3">
+                        <img class="logo-order__img" src="images/content/product-packages-4.jpg" alt="packages-4">
+                        <img class="logo-order__img" src="images/content/product-packages-5.jpg" alt="packages-5">
+                        <img class="logo-order__img" src="images/content/product-packages-6.jpg" alt="packages-6">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end logo-order -->
+        <!-- shirt -->
+        <section class="shirt">
+            <div class="container">
+                <h4 class="title">
+                    <div class="title__inner">
+                        <a class="title--blue" href="#">
+                            типовые пакеты
+
+                        </a>
+                        <svg class="title__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="title__arrow"
+                                d="M0.292893 10.2929C-0.0976311 10.6834 -0.0976311 11.3166 0.292893 11.7071C0.683417 12.0976 1.31658 12.0976 1.70711 11.7071L0.292893 10.2929ZM12 1C12 0.447715 11.5523 0 11 0H2C1.44772 0 1 0.447715 1 1C1 1.55228 1.44772 2 2 2H10V10C10 10.5523 10.4477 11 11 11C11.5523 11 12 10.5523 12 10V1ZM1.70711 11.7071L6.36228 7.05193L4.94807 5.63772L0.292893 10.2929L1.70711 11.7071ZM6.36228 7.05193L11.7071 1.70711L10.2929 0.292893L4.94807 5.63772L6.36228 7.05193Z"
+                                fill="#485BFA" />
+                        </svg>
+                    </div>
+                    «Майка»
+                </h4>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-1.png"
+                                    alt="«Финляндия» (30 мкм)">
+                                <h5 class="packages-item__title">
+                                    «Финляндия» (30 мкм)
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-2.png"
+                                    alt="«Финляндия» (30 мкм)">
+                                <h5 class="packages-item__title">
+                                    «Финляндия» (30 мкм)
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-3.png" alt="«Давыдофф»">
+                                <h5 class="packages-item__title">
+                                    «Давыдофф»
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-4.png" alt="«Бонус маркет»">
+                                <h5 class="packages-item__title">
+                                    «Бонус маркет»
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-5.png" alt="«Интерфуд»">
+                                <h5 class="packages-item__title">
+                                    «Интерфуд»
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-6.png"
+                                    alt="«Бонус Маркет» (собака)">
+                                <h5 class="packages-item__title">
+                                    «Бонус Маркет» (собака)
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-7.png" alt="«Мышь»">
+                                <h5 class="packages-item__title">
+                                    «Мышь»
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-8.png" alt="Майка «Спасибо!»">
+                                <h5 class="packages-item__title">
+                                    Майка «Спасибо!»
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-9.png"
+                                    alt="«Благодарим за покупку»">
+                                <h5 class="packages-item__title">
+                                    «Благодарим за покупку»
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-10.png"
+                                    alt="Майка «Счастья Вам!»">
+                                <h5 class="packages-item__title">
+                                    Майка «Счастья Вам!»
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-11.png"
+                                    alt="Майка «Санкт-Петербург»">
+                                <h5 class="packages-item__title">
+                                    Майка «Санкт-Петербург»
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="packages-item">
+                                <img class="packages-item__img" src="images/content/item-12.png" alt="Майка «Корова»">
+                                <h5 class="packages-item__title">
+                                    Майка «Корова»
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev">
+                        <svg class="swiper-arrow" width="17" height="30" viewBox="0 0 17 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="swiper-arrow" d="M16 1L2 15L16 29" stroke="#E2E2E2" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg class="swiper-arrow" width="17" height="30" viewBox="0 0 17 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="swiper-arrow" d="M1 29L15 15L1 0.999998" stroke="#E2E2E2" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+                <p class="shirt__text">
+                    Типовые пакеты хранятся на складе и, при наличии, доступны для заказа и самовывоза. Продаются
+                    упаковками от 500 штук. Узнайте о наличии по телефону +7 (812) 999-99-99 или
+                    <button class="btn-modal btn-modal--small">
+                        оставьте заявку
+                    </button>
+                    и мы вам перезвоним.
+                </p>
+                <div class="shirt__notice notice">
+                    <p class="notice__info">
+                        Заказать пакеты - не самая тривиальная задача, особенно для тех, кто делает это впервые. Поэтому
+                        мы создали специальный раздел, который поможет вам лучше ориентироваться в специфике и терминах.
+                    </p>
+                    <button class="btn-link">
+                        Читать гид по выбору
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--end shirt -->
+        <!--  application -->
+        <section class="application">
+            <div class="container">
+                <div class="application__inner">
+                    <div class="application__wrapper-title">
+                        <h5 class="title">
+                            Если Вы впервые заказываете пакеты и еще не разобрались во всех тонкостях, мы с радостью Вам
+                            поможем!
+                        </h5>
+                        <div class="application__desc">
+                            Оставьте заявку и мы вам перезвоним.
+                        </div>
+                    </div>
+                    <form class="application__form">
+                        <input class="application__input input" type="text" name="Name" placeholder="Имя"
+                            autocomplete="off">
+                        <input class="application__input input" type="text" name="Contact"
+                            placeholder="Телефон или e-mail" autocomplete="off">
+                        <input class="checkbox" type="checkbox" id="feedCheck">
+                        <label class="checkbox-label checkbox-label--white" for="feedCheck">
+                            Нажимая на кнопку "отправить", вы соглашаетесь на обработку персональных данных в
+                            соответствии с <a class="link-modal link-modal--orange" href="#"> политикой
+                                конфиденциальности.</a>
+                        </label>
+                        <button class="application__modal-btn modal-btn">
+                            Оставить заявку на консультацию
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- end application -->
+        <!-- service -->
+        <section class="service">
+            <div class="container">
+                <div class="service__inner">
+                    <div class="service__inner-title">
+                        <h4 class="title">
+                            Высокий уровень обслуживания и индивидуальный подход к каждому клиенту — часть нашего
+                            сервиса
+                        </h4>
+                        <a class="service__link" href="#">
+                            Как выбрать пакеты?
+                        </a>
+                    </div>
+                    <div class="benefits">
+                        <div class="benefits__card">
+                            <h5 class="benefits__title benefits__title--triangle">
+                                Сертифицированные материалы
+                            </h5>
+                            <p class="benefits__text">
+                                В производстве используются сертифицированные материалы, что обеспечивает безопасность
+                                продукции.
+                            </p>
+                        </div>
+                        <div class="benefits__card">
+                            <h5 class="benefits__title benefits__title--gear">
+                                Собственное производство
+                            </h5>
+                            <p class="benefits__text">
+                                Для того, чтобы гарантировать качество самого высокого уровня, регулярно занимаемся
+                                внедрением инновационных технологий.
+                            </p>
+                        </div>
+                        <div class="benefits__card">
+                            <h5 class="benefits__title benefits__title--around">
+                                Биоразлагаемая продукция
+                            </h5>
+                            <p class="benefits__text">
+                                Помогаем существенно снижать вредное воздействие на окружающую среду в процессе
+                                утилизации пакетов.
+                            </p>
+                        </div>
+                        <div class="benefits__card">
+                            <h5 class="benefits__title benefits__title--timer">
+                                Оперативное выполнение заказов
+                            </h5>
+                            <p class="benefits__text">
+                                С большой ответственностью подходим к оговоренным срокам. Наши клиенты могут быть
+                                спокойны, заказ будет готов вовремя.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end service -->
+
+        <!-- start products -->
+        <section class="products">
+            <div class="container">
+
+                <h4 class="title">
+                    Основная
+                    <div class="title__inner">
+                        <a class="title--blue" href="#">
+                            продукция
+
+                        </a>
+                        <svg class="title__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="title__arrow"
+                                d="M0.292893 10.2929C-0.0976311 10.6834 -0.0976311 11.3166 0.292893 11.7071C0.683417 12.0976 1.31658 12.0976 1.70711 11.7071L0.292893 10.2929ZM12 1C12 0.447715 11.5523 0 11 0H2C1.44772 0 1 0.447715 1 1C1 1.55228 1.44772 2 2 2H10V10C10 10.5523 10.4477 11 11 11C11.5523 11 12 10.5523 12 10V1ZM1.70711 11.7071L6.36228 7.05193L4.94807 5.63772L0.292893 10.2929L1.70711 11.7071ZM6.36228 7.05193L11.7071 1.70711L10.2929 0.292893L4.94807 5.63772L6.36228 7.05193Z"
+                                fill="#485BFA" />
+                        </svg>
+                    </div>
+                    компании
+                </h4>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-1.png" alt="Полиэтиленовая пленка">
+                            <h6 class="card__title">
+                                Полиэтиленовая пленка
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-2.png" alt="Пакеты «Майка»">
+                            <h6 class="card__title">
+                                Пакеты «Майка»
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-3.png" alt="Пакеты с прорубной ручкой">
+                            <h6 class="card__title">
+                                Пакеты с прорубной ручкой
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-4.png" alt="Фасовочные пакеты">
+                            <h6 class="card__title">
+                                Фасовочные пакеты
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-5.png" alt="Пакеты для колес">
+                            <h6 class="card__title">
+                                Пакеты для колес
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-6.png" alt="Мешки для мусора">
+                            <h6 class="card__title">
+                                Мешки для мусора
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-7.png" alt="Пакеты для медотходов">
+                            <h6 class="card__title">
+                                Пакеты для медотходов
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-8.png" alt="Вкладыши в короба">
+                            <h6 class="card__title">
+                                Вкладыши в короба
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-9.png" alt="Пакеты для хранения одежды">
+                            <h6 class="card__title">
+                                Пакеты для хранения одежды
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-10.png" alt="Пакеты с перфорацией">
+                            <h6 class="card__title">
+                                Пакеты с перфорацией
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <img class="card__img" src="images/content/package-11.png" alt="Типовые пакеты">
+                            <h6 class="card__title">
+                                Типовые пакеты
+                            </h6>
+                        </a>
+                        <a class="swiper-slide card" href="#">
+                            <div class="card__text">%</div>
+                            <h6 class="card__title">
+                                Спецпредложения
+                            </h6>
+                        </a>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev">
+                        <svg class="swiper-arrow" width="17" height="30" viewBox="0 0 17 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="swiper-arrow" d="M16 1L2 15L16 29" stroke="#E2E2E2" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg class="swiper-arrow" width="17" height="30" viewBox="0 0 17 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="swiper-arrow" d="M1 29L15 15L1 0.999998" stroke="#E2E2E2" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end products -->
+        <!--  offer -->
+        <section class="offer">
+            <div class="container">
+                <h4 class="offer__title title">
+                    <div class="title__inner">
+                        <a class="title--blue" href="#">
+                            спецпредложения
+                        </a>
+                        <svg class="title__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="title__arrow"
+                                d="M0.292893 10.2929C-0.0976311 10.6834 -0.0976311 11.3166 0.292893 11.7071C0.683417 12.0976 1.31658 12.0976 1.70711 11.7071L0.292893 10.2929ZM12 1C12 0.447715 11.5523 0 11 0H2C1.44772 0 1 0.447715 1 1C1 1.55228 1.44772 2 2 2H10V10C10 10.5523 10.4477 11 11 11C11.5523 11 12 10.5523 12 10V1ZM1.70711 11.7071L6.36228 7.05193L4.94807 5.63772L0.292893 10.2929L1.70711 11.7071ZM6.36228 7.05193L11.7071 1.70711L10.2929 0.292893L4.94807 5.63772L6.36228 7.05193Z"
+                                fill="#485BFA" />
+                        </svg>
+                    </div>
+                    компании
+                </h4>
+                <div class="offer__inner">
+                    <div class="offer__box">
+                        <img class="offer__img offer__img--tire" src="images/content/package-5.png"
+                            alt="Пакеты для шин">
+                        <div class="offer__desc">
+                            <div class="offer__sale">
+                                Распродажа!
+                            </div>
+                            <h5 class="offer__subtitle">
+                                Пакеты для шин от 5,90 рублей
+                            </h5>
+                            <p class="offer__text">
+                                Специальные цены только до конца марта! Черные и цветные пакеты «Фа» толщиной 22 мкм по
+                                цене от 1,20 руб., 26 мкм – от 1,30 руб. Спешите, количество ограничено.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="offer__box">
+                        <img class="offer__img" src="images/content/packages-fa.png" alt="Пакет-майка «Фа»">
+                        <div class="offer__desc">
+                            <div class="offer__sale">
+                                Держим цену!
+                            </div>
+                            <h5 class="offer__subtitle">
+                                Пакет-майка «Фа» в наличии <br> по цене 2019 года
+                            </h5>
+                            <p class="offer__text">
+                                Специальные цены только до конца марта! Черные и цветные пакеты «Фа» толщиной 22 мкм по
+                                цене от 1,20 руб., 26 мкм – от 1,30 руб. Спешите, количество ограничено.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end offer -->
+
+    </main>
+    @@include('../components/_footer.html')
+
+    @@include('../components/_scripts.html')
+</body>
+
+</html>

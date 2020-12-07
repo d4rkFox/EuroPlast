@@ -171,6 +171,7 @@ button {
     }
 
     &__center {
+        position: relative;
         display: flex;
         justify-content: space-between;
         height: 50px;
@@ -208,7 +209,7 @@ button {
 
         &::before {
             position: absolute;
-            bottom: -2px;
+            bottom: 1px;
             width: 95%;
             height: 1px;
             content: '';
@@ -306,6 +307,56 @@ button {
 }
 
 //end header=====================================================================================
+// dropdown=====================================================================================
+.dropdown {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    display: none;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: $blue;
+    box-shadow: 0 0 10px 1px $blue;
+
+    &__inner {
+        position: absolute;
+        top: 25px;
+        width: 40px;
+        height: 4px;
+        background-color: #fff;
+
+        &::after,
+        &::before {
+            position: absolute;
+            left: 0;
+            height: 4px;
+            content: '';
+            background-color: #fff;
+        }
+
+        &::after {
+            top: -10px;
+            width: 40%;
+        }
+
+        &::before {
+            top: 10px;
+            width: 70%;
+        }
+    }
+}
+
+//end dropdown=====================================================================================
+//start product===================================================================================
+.products {
+    padding: 75px 0 81px;
+}
+
+//end product===================================================================================
+//start notice=====================================================================================
+
 .notice {
     position: relative;
     padding: 14px 27px 14px 42px;
@@ -317,20 +368,22 @@ button {
 
     &::before {
         position: absolute;
-        top: 50%;
+        top: 18px;
         left: 21px;
         width: 8px;
         height: 30px;
         content: '';
         background-image: url(../images/exclamation.svg);
         @include img;
-        transform: translateY(-50%);
+
     }
 
     &__text {
         @include a600;
     }
 }
+
+//end notice=====================================================================================
 
 //start search=====================================================================================
 .search {
@@ -516,103 +569,6 @@ button {
 }
 
 //end title=====================================================================================
-//start card===================================================================================
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 236px;
-    padding: 26px 0;
-    color: #fff;
-    background-color: $blue;
-    @include trColor;
-
-    &:hover {
-        color: #141414;
-        background-color: $orangeBg;
-    }
-
-    &__img {
-        margin-top: auto;
-    }
-
-    &__title {
-        font-size: 16px;
-        margin-top: auto;
-    }
-
-    &__text {
-        margin-top: auto;
-        font-size: 45px;
-        @include b700;
-    }
-}
-
-//end card===================================================================================
-//start benefits================================================================================
-.benefits {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 10px;
-
-    &__card {
-        max-width: 285px;
-        margin-bottom: 35px;
-    }
-
-    &__title {
-        position: relative;
-        max-width: 213px;
-        padding-top: 49px;
-        padding-bottom: 15px;
-        font-size: 16px;
-        line-height: 22.4px;
-        @include a700;
-
-        &::before {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: 0;
-        }
-
-        &--triangle::before {
-            width: 34px;
-            height: 36px;
-            background-image: url(../images/icon-triangle.svg);
-        }
-
-        &--gear::before {
-            width: 30px;
-            height: 30px;
-            background-image: url(../images/icon-gear.svg);
-        }
-
-        &--around::before {
-            width: 30px;
-            height: 30px;
-            background-image: url(../images/icon-around.svg);
-        }
-
-        &--timer::before {
-            width: 31px;
-            height: 31px;
-            background-image: url(../images/icon-timer.svg);
-        }
-
-    }
-
-    &__text {
-        max-width: 271px;
-        padding-top: 15px;
-        line-height: 21px;
-        color: #575757;
-        border-top: 2px solid #141414;
-    }
-}
-
-//end benefits===================================================================================
 
 //start footer====================================================================================
 .footer {
@@ -717,6 +673,7 @@ button {
 }
 
 //end footer======================================================================================
+
 //start text======================================================================================
 .text {
     font-size: 13px;
@@ -725,6 +682,10 @@ button {
 
     &:nth-child(even) {
         margin-bottom: 5px;
+    }
+
+    &--space {
+        display: block;
     }
 
     &--darkgray {
@@ -913,6 +874,12 @@ button {
         border-radius: 3px;
     }
 
+    &--white {
+        display: block;
+        margin-top: 25px;
+        color: #fff;
+    }
+
     &--big {
         padding-top: 6px;
         padding-left: 39px;
@@ -963,6 +930,18 @@ button {
 
     &:hover::before {
         background-color: $orange;
+    }
+
+    &--orange {
+        display: inline;
+        color: $orange;
+        border-bottom: 1px solid $orange;
+        transition: border-bottom 0.3s, color 0.3s;
+
+        &:hover {
+            color: #575757;
+            border-bottom: 1px solid #575757;
+        }
     }
 }
 
@@ -1028,7 +1007,6 @@ button {
         justify-content: space-between;
         margin-top: 7px;
         color: #b6b6b6;
-
     }
 
     &__bottom {
@@ -1107,14 +1085,48 @@ button {
 //end modal select======================================================================================
 
 .packages-item {
+    flex-basis: calc(25% - 10px);
+    padding: 15px 20px 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: #575757;
+    border: 1px solid #e2e2e2;
 
-&__img {}
+    &__img {
+        margin-bottom: 13px;
+    }
 
-&__title {}
+    &__title {
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 22.4px;
+        text-align: left;
+        @include a700;
+    }
 
-&__desc {}
+    &__desc {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 6px;
+        margin-bottom: 8px;
+        font-size: 13px;
+        line-height: 18.2px;
+        text-align: left;
 
-&__text {}
+        &+& {
+            border-top: 1px solid #e2e2e2;
+        }
+    }
+
+    &__btn-link {
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    &__text {
+        display: inline-block;
+        width: 100%;
+        max-width: 144px;
+        @include a600;
+    }
 }
-
-.btn-link {}

@@ -154,80 +154,1249 @@
         <section class="packages">
             <div class="container">
                 <div class="sort">
-                    <button class="sort__btn sort__btn--active">Все типовые пакеты</button>
-                    <button class="sort__btn">Пакеты-майка цветные с рисунком</button>
-                    <button class="sort__btn">Пакеты для мусора</button>
-                    <button class="sort__btn">Пакеты-майк цветные с рисунком</button>
-                    <button class="sort__btn">Пакеты-майка без рисунка</button>
+                    <button class="sort__btn sort__btn--active" data-sort="all">Все типовые пакеты</button>
+                    <button class="sort__btn" data-sort="drawPVD">Пакеты-майка ПВД цветные с рисунком</button>
+                    <button class="sort__btn" data-sort="garbage">Пакеты для мусора</button>
+                    <button class="sort__btn" data-sort="drawPND">Пакеты-майка ПНД цветные с рисунком</button>
+                    <button class="sort__btn" data-sort="withoutDraw">Пакеты-майка без рисунка</button>
                 </div>
+                <div class="packages__box" id="drawPVD">
+                    <h4 class="packages__title">
+                        Пакеты-майка ПВД цветные с рисунком
+                    </h4>
+                    <div class="packages__inner">
 
-                <h4 class="packages__title">
-                    Пакеты-майка ПВД цветные с рисунком
-                </h4>
-                <div class="packages__inner">
-                    <div class="packages-item">
-                        <img class="packages-item__img" src="images/content/item-1.jpg" alt="">
-                        <h5 class="packages-item__title">
-                            «Финляндия» (30 мкм)
-                        </h5>
-                        <div class="packages-item__desc">
-                            <span class="packages-item__text">
-                                Ширина:
-                            </span>
-                            280(+2х75) мм
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-1.png" alt="«Финляндия» (30 мкм)">
+                            <h5 class="packages-item__title">
+                                «Финляндия» (30 мкм)
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
                         </div>
-                        <div class="packages-item__desc">
-                            <span class="packages-item__text">
-                                Высота:
-                            </span>
-                            570 мм
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-2.png" alt="">
+                            <h5 class="packages-item__title">
+                                «Финляндия» (30 мкм)
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
                         </div>
-                        <div class="packages-item__desc">
-                            <span class="packages-item__text">
-                                Печать:</span>
-                            в ассортименте
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-3.png" alt="">
+                            <h5 class="packages-item__title">
+                                «Давыдофф»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
                         </div>
-                        <div class="packages-item__desc">
-                            <span class="packages-item__text">
-                                Материал и толщина:
-                            </span>
-                            ПВД, 30 микрон
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-4.png" alt="">
+
+                            <h5 class="packages-item__title">
+                                <h5 class="packages-item__title">
+                                    «Бонус маркет»
+                                </h5>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Ширина:
+                                    </span>
+                                    280(+2х75) мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Высота:
+                                    </span>
+                                    570 мм
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Печать:
+                                    </span>
+                                    в ассортименте
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Материал и толщина:
+                                    </span>
+                                    ПВД, 30 микрон
+                                </div>
+                                <div class="packages-item__desc">
+                                    <span class="packages-item__text">
+                                        Кол-во в упаковке:
+                                    </span>
+                                    600 шт.
+                                </div>
+                                <button class="packages-item__btn-link btn-link">
+                                    Сделать заказ
+                                </button>
                         </div>
-                        <div class="packages-item__desc">
-                            <span class="packages-item__text">
-                                Кол-во в упаковке:
-                            </span>
-                            600 шт.
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-5.png" alt="">
+
+                            <h5 class="packages-item__title">
+                                «Интерфуд»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
                         </div>
-                        <button class="btn-link">
-                            Сделать заказ
-                        </button>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-6.png" alt="«Бонус Маркет» (собака)">
+                            <h5 class="packages-item__title">
+                                «Бонус Маркет» (собака)
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-7.png" alt="«Мышь»">
+                            <h5 class="packages-item__title">
+                                «Мышь»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
                     </div>
-                    <img class="packages-item__img" src="images/content/item-2.jpg" alt="">
-                    <img class="packages-item__img" src="images/content/item-3.jpg" alt="">
-                    <img class="packages-item__img" src="images/content/item-4.jpg" alt="">
-                    <img class="packages-item__img" src="images/content/item-5.jpg" alt="">
-                    <img class="packages-item__img" src="images/content/item-6.jpg" alt="">
-                    <img class="packages-item__img" src="images/content/item-7.jpg" alt="">
-
                 </div>
-                <img class="packages-item__img" src="images/content/item-8.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-9.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-10.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-11.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-12.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-13.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-14.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-15.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-16.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-17.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-18.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-19.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-20.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-21.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-22.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-23.jpg" alt="">
-                <img class="packages-item__img" src="images/content/item-24.jpg" alt="">
+                <div class="packages__box" id="drawPND">
+                    <h4 class="packages__title">
+                        Пакеты-майка ПНД цветные с рисунком
+                    </h4>
+                    <div class="packages__inner">
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-8.png" alt="Майка «Спасибо!»">
+                            <h5 class="packages-item__title">
+                                Майка «Спасибо!»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-9.png"
+                                alt="«Благодарим за покупку»">
+                            <h5 class="packages-item__title">
+                                «Благодарим за покупку»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-10.png" alt="Майка «Счастья Вам!»">
+                            <h5 class="packages-item__title">
+                                Майка «Счастья Вам!»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-11.png"
+                                alt="Майка «Санкт-Петербург»">
+                            <h5 class="packages-item__title">
+                                Майка «Санкт-Петербург»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-12.png" alt="Майка «Корова»">
+                            <h5 class="packages-item__title">
+                                Майка «Корова»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-13.png" alt="Майка «Ягода»">
+                            <h5 class="packages-item__title">
+                                Майка «Ягода»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-14.png" alt="Майка «Фа»">
+                            <h5 class="packages-item__title">
+                                Майка «Фа»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-15.png" alt="Майка «Гжель»">
+                            <h5 class="packages-item__title">
+                                Майка «Гжель»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-16.png" alt="Майка «БМВ»">
+                            <h5 class="packages-item__title">
+                                Майка «БМВ»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-17.png" alt="Майка «Техника»">
+                            <h5 class="packages-item__title">
+                                Майка «Техника»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="packages__box" id="withoutDraw">
+                    <h4 class="packages__title">
+                        Пакеты-майка ПНД и ПВД без рисунка
+                    </h4>
+                    <div class="packages__inner">
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-18.png" alt="Майка «Ашан ХХL» ПНД">
+                            <h5 class="packages-item__title">
+                                Майка «Ашан ХХL» ПНД
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-19.png" alt="Майка «Ашан» ПНД">
+                            <h5 class="packages-item__title">
+                                Майка «Ашан» ПНД
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-20.png"
+                                alt="Майка тонированная ПНД">
+                            <h5 class="packages-item__title">
+                                Майка тонированная ПНД
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-21.png" alt="Майка белая ПВД">
+                            <h5 class="packages-item__title">
+                                Майка белая ПВД
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-22.png" alt="Майка черная ПВД">
+                            <h5 class="packages-item__title">
+                                Майка черная ПВД
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-22.png"
+                                alt="Майка черная ПНД (20 мкм)">
+                            <h5 class="packages-item__title">
+                                Майка черная ПНД (20 мкм)
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-22.png"
+                                alt="Майка черная ПНД (26 мкм)">
+                            <h5 class="packages-item__title">
+                                Майка черная ПНД (26 мкм)
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="packages__box" id="garbage">
+                    <h4 class="packages__title">
+                        Пакеты для мусора ПНД и ПВД
+                    </h4>
+                    <div class="packages__inner">
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-23.png" alt="Пакеты «Кенго»">
+                            <h5 class="packages-item__title">
+                                Пакеты «Кенго»
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-24.png" alt="Пакеты ПНД 600x800">
+                            <h5 class="packages-item__title">
+                                Пакеты ПНД 600x800
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-25.png" alt="Пакеты ПНД 700x1100">
+                            <h5 class="packages-item__title">
+                                Пакеты ПНД 700x1100
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-26.png" alt="Пакеты ПВД 700x1100">
+                            <h5 class="packages-item__title">
+                                Пакеты ПВД 700x1100
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-26.png" alt="Пакеты ПВД 700x1100">
+                            <h5 class="packages-item__title">
+                                Пакеты ПВД 700x1100
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                        <div class="packages-item">
+                            <img class="packages-item__img" src="images/content/item-26.png" alt="Пакеты ПВД 900x1100">
+                            <h5 class="packages-item__title">
+                                Пакеты ПВД 900x1100
+                            </h5>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Ширина:
+                                </span>
+                                280(+2х75) мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Высота:
+                                </span>
+                                570 мм
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Печать:
+                                </span>
+                                в ассортименте
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Материал и толщина:
+                                </span>
+                                ПВД, 30 микрон
+                            </div>
+                            <div class="packages-item__desc">
+                                <span class="packages-item__text">
+                                    Кол-во в упаковке:
+                                </span>
+                                600 шт.
+                            </div>
+                            <button class="packages-item__btn-link btn-link">
+                                Сделать заказ
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
 

@@ -48,16 +48,108 @@
 }
 
 //end products-choice=====================================================================================
-// card=====================================================================================
 
+//start card===================================================================================
 .card {
+    display: flex;
     flex-basis: calc(25% - 10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 287px;
+    padding: 26px 0;
     margin-bottom: 10px;
     margin-left: 10px;
+    color: #fff;
+    background-color: $blue;
+    @include trColor;
+
+    &:hover {
+        color: #141414;
+        background-color: $orangeBg;
+    }
+
+    &__img {
+        margin-top: auto;
+    }
+
+    &__title {
+        font-size: 16px;
+        margin-top: auto;
+    }
+
+    &__text {
+        margin-top: auto;
+        font-size: 45px;
+        @include b700;
+    }
 }
 
-//end card=====================================================================================
+//end card===================================================================================
+
+
+//start benefits================================================================================
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+
+    &__card {
+        max-width: 285px;
+        margin-bottom: 35px;
+    }
+
+    &__title {
+        position: relative;
+        max-width: 213px;
+        padding-top: 49px;
+        padding-bottom: 15px;
+        font-size: 16px;
+        line-height: 22.4px;
+        @include a700;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+        }
+
+        &--triangle::before {
+            width: 34px;
+            height: 36px;
+            background-image: url(../images/icon-triangle.svg);
+        }
+
+        &--gear::before {
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/icon-gear.svg);
+        }
+
+        &--around::before {
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/icon-around.svg);
+        }
+
+        &--timer::before {
+            width: 31px;
+            height: 31px;
+            background-image: url(../images/icon-timer.svg);
+        }
+    }
+
+    &__text {
+        max-width: 271px;
+        padding-top: 15px;
+        line-height: 21px;
+        color: #575757;
+        border-top: 2px solid #141414;
+    }
+}
+
+//end benefits===================================================================================
 // choice=====================================================================================
 
 .choice {

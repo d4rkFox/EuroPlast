@@ -80,9 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Кнопка закрытия модального окна
 
     function closeModal() {
-        feedback.forEach(item=>{
-            item.classList.remove("feedback--active"); 
-        }); 
+        feedback.forEach((item) => {
+            item.classList.remove("feedback--active");
+        });
         document.body.style.overflow = "visible";
         document.body.style.marginRight = "0";
         innerFeedback.forEach((item) => {
@@ -90,9 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    modalBtnClose.forEach(item=>{
+    modalBtnClose.forEach((item) => {
         item.addEventListener("click", closeModal);
-    }); 
+    });
     ////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -100,7 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 4,
         slidesPerGroup: 4,
         spaceBetween: 10,
-        loop: true,
         // If we need pagination
         pagination: {
             el: ".swiper-pagination",
@@ -111,5 +110,45 @@ document.addEventListener("DOMContentLoaded", () => {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        watchOverflow: true
+    });
+    let dataAttribute;
+    let packagesWrapperID;
+    const dataSort = document.querySelectorAll(".sort__btn"),
+        packagesParent = document.querySelector(".packages"),
+        packagesWrapper = document.querySelectorAll(".packages__box");
+    dataSort.forEach((item) => {
+        item.addEventListener("click", (event) => {
+            const target = event.target;
+            dataAttribute = target.getAttribute("data-sort");
+
+            for (let i = 0; i < packagesWrapper.length; i++) {
+                if (packagesWrapper[i].id === "all") {
+                    packagesWrapper[i].classList.remove(
+                        "packages__box--disable"
+                    );
+                } else if (packagesWrapper[i].id === dataAttribute) {
+                    packagesWrapper[i].classList.remove(
+                        "packages__box--disable"
+                    );
+                } else {
+                    packagesWrapper[i].classList.add("packages__box--disable");
+                    console.log(packagesWrapper[i]);
+                    // item.remove();
+                }
+                // packagesWrapper[i].classList.toggle("packages__box--disable");
+                // packagesWrapperID = packagesParent.querySelector(`#${dataAttribute}`).id;
+                // if (dataAttribute === packagesWrapperID) {
+                // packagesWrapper[i].classList.remove(
+                //     "packages__box--disable"
+                // );
+                // console.log("d");
+                // } else {
+                //     packagesWrapper[i].classList.add("packages__box--disable");
+                //     console.log(packagesWrapper[i]);
+                //     // item.remove();
+                // }
+            }
+        });
     });
 });

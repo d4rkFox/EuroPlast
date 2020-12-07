@@ -2,74 +2,6 @@
 @import "vars";
 @import "global";
 
-//start product===================================================================================
-.products {
-    padding: 75px 0 81px;
-}
-
-//end product===================================================================================
-
-//start swiper===================================================================================
-.swiper-container {
-    margin-top: -55px;
-    padding-top: 75px;
-}
-
-.swiper-arrow {
-    transition: stroke 0.3s;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    top: 25px;
-    width: 17px;
-
-    &::after,
-    &::before {
-        content: '';
-    }
-
-    &:hover .swiper-arrow {
-        stroke: $blue;
-    }
-}
-
-.swiper-button-next {
-    right: 0;
-}
-
-.swiper-button-prev {
-    right: 75px;
-    left: auto;
-}
-
-.swiper-container-horizontal .swiper-pagination-bullets {
-    top: 15px;
-    right: 19px;
-    bottom: auto;
-    left: auto;
-    text-align: right;
-}
-
-.swiper-pagination-bullet {
-    margin: 0 !important;
-    width: 10px;
-    height: 10px;
-    background-color: #e2e2e2;
-    border-radius: 0;
-    opacity: 1;
-    transition: background-color 0.3s;
-
-    &+& {
-        margin-left: 10px !important;
-    }
-}
-
-.swiper-pagination-bullet-active {
-    background-color: $blue;
-}
-
-//end swiper===================================================================================
 //start service================================================================================
 .service {
     padding: 85px 0 95px;
@@ -104,6 +36,104 @@
 }
 
 //end service===================================================================================
+
+//start card===================================================================================
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 236px;
+    padding: 26px 0;
+    color: #fff;
+    background-color: $blue;
+    @include trColor;
+
+    &:hover {
+        color: #141414;
+        background-color: $orangeBg;
+    }
+
+    &__img {
+        margin-top: auto;
+    }
+
+    &__title {
+        font-size: 16px;
+        margin-top: auto;
+    }
+
+    &__text {
+        margin-top: auto;
+        font-size: 45px;
+        @include b700;
+    }
+}
+
+//end card===================================================================================
+
+//start benefits================================================================================
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+
+    &__card {
+        max-width: 285px;
+        margin-bottom: 35px;
+    }
+
+    &__title {
+        position: relative;
+        max-width: 213px;
+        padding-top: 49px;
+        padding-bottom: 15px;
+        font-size: 16px;
+        line-height: 22.4px;
+        @include a700;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+        }
+
+        &--triangle::before {
+            width: 34px;
+            height: 36px;
+            background-image: url(../images/icon-triangle.svg);
+        }
+
+        &--gear::before {
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/icon-gear.svg);
+        }
+
+        &--around::before {
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/icon-around.svg);
+        }
+
+        &--timer::before {
+            width: 31px;
+            height: 31px;
+            background-image: url(../images/icon-timer.svg);
+        }
+    }
+
+    &__text {
+        max-width: 271px;
+        padding-top: 15px;
+        line-height: 21px;
+        color: #575757;
+        border-top: 2px solid #141414;
+    }
+}
+
+//end benefits===================================================================================
 
 //start production=================================================================================
 .production {
@@ -234,17 +264,12 @@
         color: $blue;
     }
 
-    .benefits {
-        column-gap: 8px;
-        max-width: 290px;
-
-        &__plus {
-            display: inline-block;
-            margin-top: 55px;
-            margin-bottom: 51px;
-            font-size: 100px;
-            @include b700;
-        }
+    .benefits__plus {
+        display: inline-block;
+        margin-top: 55px;
+        margin-bottom: 51px;
+        font-size: 100px;
+        @include b700;
     }
 }
 
@@ -304,3 +329,70 @@
 }
 
 //end news-card============================================================================================
+
+//start swiper===================================================================================
+.swiper-container {
+    margin-top: -55px;
+    padding-top: 75px;
+}
+
+.swiper-arrow {
+    transition: stroke 0.3s;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    top: 25px;
+    width: 17px;
+
+    &::after,
+    &::before {
+        content: '';
+    }
+
+    &:hover .swiper-arrow {
+        stroke: $blue;
+    }
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    right: 75px;
+    left: auto;
+}
+
+.swiper-container-horizontal .swiper-pagination-bullets {
+    top: 15px;
+    right: 19px;
+    bottom: auto;
+    left: auto;
+    text-align: right;
+}
+
+.swiper-pagination-bullet {
+    margin: 0 !important;
+    width: 10px;
+    height: 10px;
+    background-color: #e2e2e2;
+    border-radius: 0;
+    opacity: 1;
+    transition: background-color 0.3s;
+
+    &+& {
+        margin-left: 10px !important;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $blue;
+}
+
+//end swiper===================================================================================
+main{
+    display: none;
+}
+@import "media";
+@import "media-main";

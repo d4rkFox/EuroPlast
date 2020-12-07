@@ -8,22 +8,45 @@
 }
 
 //end header=====================================================================================
+// packeges=====================================================================================
 
 .packages {
     padding-top: 50px;
 
     &__title {
         padding-bottom: 8px;
+        margin-bottom: 31px;
         font-size: 20px;
         line-height: 28px;
         @include a700;
         border-bottom: 2px solid #141414;
     }
 
-    &__inner {}
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        margin-left: -10px;
+        text-align: center;
+    }
+
+    &__box {
+        height: 100%;
+        transition: transform 0.3s, opacity 0.3s, height 0.3s;
+
+        &--disable {
+            transform: rotate(0deg) translateX(100%) scale(0);
+            opacity: 0;
+            height: 0;
+        }
+    }
 }
 
+//end packeges=====================================================================================
+// sort=====================================================================================
+
 .sort {
+    margin-bottom: 33px;
 
     &__btn {
         height: 35px;
@@ -33,7 +56,8 @@
         background-color: #d3d8ff;
         border-radius: 20px;
         @include trColor;
-        &+&{
+
+        &+& {
             margin-left: 10px;
         }
 
@@ -44,5 +68,7 @@
         }
     }
 }
+
+//end sort=====================================================================================
 
 @import "media";
