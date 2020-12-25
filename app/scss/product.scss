@@ -1,5 +1,6 @@
 @import "fonts";
 @import "vars";
+@import "keyframes";
 @import "global";
 
 //start header===================================================================================
@@ -7,9 +8,11 @@
     &--increased {
         background-image: url(../images/products-bg.jpg);
     }
+
     &__img--pressUp {
         align-self: flex-start;
     }
+
     &__img--center {
         align-self: center;
     }
@@ -19,11 +22,6 @@
         justify-content: space-between;
 
         .header {
-            &__title {
-                margin-bottom: 22px;
-                font-size: 40px;
-                line-height: 56px;
-            }
 
             &__desc {
                 flex-basis: 585px;
@@ -70,10 +68,6 @@
         border: 2px solid #d3d8ff;
     }
 
-    &__btn-wrapper {
-        max-width: 200px;
-    }
-
     &__table-title {
         padding-bottom: 15px;
         margin-top: 25px;
@@ -87,6 +81,7 @@
     &__row {
         position: relative;
         display: flex;
+        padding-right: 25px;
         margin-bottom: 10px;
         font-size: 15px;
         line-height: 21px;
@@ -98,6 +93,7 @@
             margin-top: 10px;
             border-top: 1px solid #e2e2e2;
         }
+
         &--inline {
             .header__row-inner {
                 display: block;
@@ -107,9 +103,9 @@
     }
 
     &__row-text {
-        margin-bottom: 2px;
         width: 100%;
         max-width: 387px;
+        margin-bottom: 2px;
 
         &--bold {
             width: 100%;
@@ -132,6 +128,10 @@
     &__row-inner {
         display: flex;
         flex-direction: column;
+    }
+
+    &__img--off {
+        display: none;
     }
 }
 
@@ -177,7 +177,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 3px;
+    padding-top: 7px;
     padding-left: 30px;
     font-size: 30px;
     line-height: 42px;
@@ -293,11 +293,6 @@
 
 .swiper-pagination-bullet-active {
     background-color: $blue;
-}
-
-.swiper-button-prev.swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled {
-    display: none;
 }
 
 //end swiper===================================================================================
@@ -514,16 +509,20 @@
             background-color: $blue;
             border: 2px solid transparent;
         }
-
     }
 
     &__wrapper-img {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 188px;
         row-gap: 10px;
         column-gap: 10px;
         max-width: 585px;
         margin-left: 10px;
+
+        &--off {
+            display: none;
+        }
     }
 
     &__img {
@@ -599,7 +598,30 @@
     }
 
     &__form {
+        position: relative;
         max-width: 486px;
+        margin-left: 20px;
+        overflow: hidden;
+    }
+
+    &__notification {
+        position: absolute;
+        top: -100%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        font-size: 40px;
+        line-height: 50px;
+        color: $blue;
+        background-color: #fff;
+        @include b700;
+        transition: top 0.5s;
+        &--done {
+            top: 0;
+        }
     }
 
     &__input {
@@ -657,7 +679,6 @@
         flex-direction: column;
         align-items: flex-start;
         align-self: normal;
-
         justify-content: space-between;
         padding: 30px 32px 46px 5px;
     }
@@ -689,3 +710,19 @@
 
 //end offer===================================================================================
 @import "media";
+
+@media (max-width: 768px) {
+    .header__list--active {
+        transform: translateX(-15px);
+    }
+
+    .header__calculating {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__list--active {
+        width: 110%;
+    }
+}

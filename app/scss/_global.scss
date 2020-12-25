@@ -11,6 +11,7 @@ html {
 html,
 body {
     position: relative;
+    overflow-x: hidden;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     line-height: 19px;
     @include a400;
     color: #141414;
+
 }
 
 ul,
@@ -57,16 +59,12 @@ button {
     margin: 0 auto;
 }
 
-.anchor {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    clip: rect(0 0 0 0);
-}
-
 // breadcrumbs=====================================================================================
 .breadcrumbs {
+    position: relative;
+    z-index: 0;
+    white-space: nowrap;
+
     &__text {
         position: relative;
         padding: 20px 0;
@@ -75,11 +73,11 @@ button {
 
         &::after {
             position: absolute;
-            content: '';
-            left: 0;
             bottom: 18px;
+            left: 0;
             width: 95%;
             height: 1px;
+            content: '';
             background-color: #afafaf;
         }
 
@@ -103,6 +101,7 @@ button {
 
 //start header===================================================================================
 .header {
+    z-index: 1;
     padding-top: 15px;
     background-image: url(../images/header-bg.jpg);
     @include img;
@@ -239,6 +238,7 @@ button {
         display: block;
         padding: 16px 29px 15px 30px;
         font-size: 16px;
+        white-space: nowrap;
         @include a700;
         color: #fff;
         background-color: $blue;
@@ -260,7 +260,9 @@ button {
     }
 
     &__bottom {
+        position: relative;
         display: flex;
+        align-items: flex-start;
         padding-top: 30px;
     }
 
@@ -307,8 +309,8 @@ button {
 }
 
 //end header=====================================================================================
-// dropdown=====================================================================================
-.dropdown {
+// dropdown-menu=====================================================================================
+.dropdown-menu {
     position: absolute;
     bottom: -50px;
     left: 0;
@@ -316,8 +318,8 @@ button {
     width: 50px;
     height: 50px;
     padding: 5px;
-    border-radius: 3px;
     background-color: $blue;
+    border-radius: 3px;
     box-shadow: 0 0 10px 1px $blue;
 
     &__inner {
@@ -339,16 +341,33 @@ button {
         &::after {
             top: -10px;
             width: 40%;
+            transition: transform 0.3s, top 0.3s, width 0.3s;
         }
 
         &::before {
             top: 10px;
             width: 70%;
+            transition: width 0.3s;
+        }
+
+        &--close {
+            transition: transform 0.3s;
+            transform: rotate(45deg);
+
+            &::before {
+                width: 0;
+            }
+
+            &::after {
+                top: 0;
+                width: 100%;
+                transform: rotate(85deg);
+            }
         }
     }
 }
 
-//end dropdown=====================================================================================
+//end dropdown-menu=====================================================================================
 //start product===================================================================================
 .products {
     padding: 75px 0 81px;
@@ -375,7 +394,6 @@ button {
         content: '';
         background-image: url(../images/exclamation.svg);
         @include img;
-
     }
 
     &__text {
@@ -390,7 +408,7 @@ button {
     position: absolute;
     top: 0;
     right: 47px;
-    z-index: 1;
+    z-index: 4;
     width: 100%;
     max-width: 901px;
     visibility: hidden;
@@ -500,8 +518,8 @@ button {
     transition: color 0.3s, border-bottom 0.3s;
 
     &:hover {
-        border-bottom: 2px solid $orange;
         color: $orange;
+        border-bottom: 2px solid $orange;
     }
 
     &--orange {
@@ -604,9 +622,9 @@ button {
     }
 
     &__list {
+        column-gap: 0;
         list-style: none;
         column-count: 2;
-        column-gap: 0;
     }
 
     &__list-item {
@@ -667,8 +685,8 @@ button {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding-top: 10px;
         max-width: 236px;
+        padding-top: 10px;
     }
 }
 
@@ -705,12 +723,49 @@ button {
 }
 
 //end text======================================================================================
+
+// button-return
+.button-return {
+    position: fixed;
+    z-index: 3;
+    right: -50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background-color: $blue;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 5px #fff;
+    opacity: 0;
+    transition: right 1s, opacity 1s, transform 0s 1s;
+
+    &--active {
+        right: 50px;
+        opacity: 1;
+        transition: right 1.2s, opacity 1.2s, transform 0.3s 1.2s;
+        transform: rotate(90deg);
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &--active {
+            animation: moveButtonReturnStart 2s infinite;
+        }
+
+    }
+}
+
+//end button-return
 //start feedback======================================================================================
 .feedback {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 4;
     width: 100%;
     height: 100%;
     visibility: hidden;
@@ -721,6 +776,28 @@ button {
     &--active {
         visibility: visible;
         opacity: 1;
+    }
+
+    &__notification {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        width: 100%;
+        max-width: 600px;
+        padding: 30px;
+        background-color: #575757;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        box-shadow: 0 0 10px 5px #fff;
+        font-size: 40px;
+        line-height: 50px;
+        @include b700;
+        transform: rotateY(-90deg);
+        transition: transform 0.5s 0.5s;
+
+        &--done {
+            transform: rotateY(0deg);
+        }
     }
 
     &__close {
@@ -738,12 +815,20 @@ button {
         }
     }
 
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 92px 38px;
+        background-color: #f5f5f5;
+    }
+
     &__inner {
         position: absolute;
         top: 35%;
         left: 50%;
         display: flex;
         flex-direction: column;
+        width: 100%;
         max-width: 555px;
         opacity: 0;
         transition: top 0.3s, opacity 0.5s;
@@ -756,20 +841,19 @@ button {
 
         &--large {
             max-width: 756px;
-            transform: translate(-50%, -50%) scale(0.75);
+            transform: translate(-50%, -50%) scale(0.78);
         }
-    }
 
-    &__form {
-        display: flex;
-        flex-direction: column;
-        padding: 30px 92px 38px;
-        background-color: #f5f5f5;
+        &--done {
+            transition: transform 0.5s;
+            transform: translate(-50%, -50%) rotateY(90deg) !important;
+        }
     }
 
     &__input {
         max-width: 370px;
         margin-bottom: 10px;
+        transition: border 0.3s;
     }
 
     &__textarea {
@@ -814,6 +898,7 @@ button {
     height: 50px;
     padding: 0 23px;
     border: 2px solid #e2e2e2;
+    transition: border 1s;
 
     &::placeholder {
         font-size: 15px;
@@ -825,6 +910,10 @@ button {
         width: 100%;
         max-width: 282px;
         margin-bottom: 6px;
+    }
+
+    &--wrong {
+        border: 3px solid rgb(189, 0, 0);
     }
 }
 
@@ -890,15 +979,19 @@ button {
             height: 30px;
         }
     }
+
+    &--shake {
+        animation: shake 0.5s;
+    }
 }
 
 .checkbox {
     display: none;
 
     &:checked+.checkbox-label::before {
+        background-color: $orangeBg;
         background-image: url(../images/check.png);
         background-repeat: no-repeat;
-        background-color: $orangeBg;
         background-position: center;
         border-color: #575757;
         transition: background-color 0.3s;
@@ -961,14 +1054,15 @@ button {
 
     &__inner {
         display: flex;
+        column-gap: 10px;
         justify-content: space-between;
         padding-bottom: 15px;
         margin-bottom: 15px;
         border-bottom: 1px solid #e2e2e2;
 
         &--checkbox {
-            justify-content: flex-start;
             column-gap: 35px;
+            justify-content: flex-start;
             padding-bottom: 30px;
             border: none;
         }
@@ -1017,73 +1111,192 @@ button {
     }
 }
 
+
 //end modal calc======================================================================================
-
-//modal select======================================================================================
-.select {
+.jq-selectbox__select-text {
     position: relative;
-
-    &__inner {
-        padding: 0 23px;
-    }
-
-    &:first-child {
-        width: 100%;
-        max-width: 240px;
-
-        .select__inner {
-            width: 100%;
-            max-width: 240px;
-            padding-left: 15px;
-        }
-    }
-
-    &:nth-child(even) {
-        width: 100%;
-        max-width: 130px;
-
-        .select__inner {
-            width: 100%;
-            max-width: 130px;
-        }
-    }
-
-    &:last-child {
-        width: 100%;
-        max-width: 180px;
-
-        .select__inner {
-            width: 100%;
-            max-width: 180px;
-        }
-    }
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    height: 46px;
+    padding-left: 20px;
+    white-space: normal;
+    background-color: #d5d5d5;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    overflow: visible;
 
     &::before {
+        z-index: 1;
         position: absolute;
         top: 50%;
-        right: 10px;
+        right: 15px;
         width: 20px;
         height: 10px;
+        pointer-events: none;
         content: '';
         background-image: url(../images/icon-arrowDown.svg);
         background-repeat: no-repeat;
         @include img;
         transform: translateY(-50%);
-        pointer-events: none;
+    }
+
+
+}
+
+.jq-selectbox li {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    padding-left: 20px;
+    white-space: normal;
+    background-color: #d5d5d5;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    border-top: 1px solid rgb(231, 231, 231);
+
+    &:hover {
+        background-color: rgb(238, 238, 238);
+    }
+}
+
+// .jq-selectbox__dropdown {
+//     height: 313px !important;
+//     top: 100px !important;
+//     border-bottom: 3px solid #8d8d8d;
+// }
+
+.jq-selectbox__dropdown ul {
+    max-height: 313px;
+    margin-top: 46px;
+    border-bottom: 3px solid #8d8d8d;
+}
+
+//modal select======================================================================================
+.select {
+    position: relative;
+
+    &__label {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .disabled {
+        display: none;
+    }
+
+    &__item {
+        position: relative;
+        height: 46px;
+        font-size: 14px;
+        white-space: normal;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            display: flex;
+            align-items: center;
+            width: 38px;
+            height: 38px;
+            content: '';
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            transform: translateY(-50%);
+        }
+
+        &--film::before {
+            background-image: url(../images/content/film-mini.png);
+        }
+
+        &--shirt::before {
+            background-image: url(../images/content/package-2.png);
+        }
+
+        &--handler::before {
+            background-image: url(../images/content/package-3.png);
+        }
+
+        &--cellophane::before {
+            background-image: url(../images/content/package-4.png);
+        }
+
+        &--tire::before {
+            background-image: url(../images/content/package-5.png);
+        }
+
+        &--garbage::before {
+            background-image: url(../images/content/package-6.png);
+        }
+
+        &--med::before {
+            background-image: url(../images/content/package-7.png);
+        }
+
+        &--liners::before {
+            background-image: url(../images/content/package-8.png);
+        }
+
+        &--clothes::before {
+            background-image: url(../images/content/package-9.png);
+        }
+
+        &--perforation::before {
+            background-image: url(../images/content/package-10.png);
+        }
+
+        &--typical::before {
+            background-image: url(../images/content/package-11.png);
+        }
+
+        &--offer::before {
+            content: '%';
+        }
+
     }
 
     &__inner {
-        height: 46px;
-        padding-left: 20px;
-        appearance: none !important;
-        background-color: #d5d5d5;
-        border: 1px solid #cfcfcf;
-        border-radius: 3px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &:first-child {
+        .jq-selectbox__select-text {
+            width: 240px;
+            padding: 5px 46px 7px 59px;
+        }
+
+        .jq-selectbox li {
+            width: 240px;
+            padding: 5px 46px 7px 59px;
+        }
+    }
+
+    &:nth-child(2) {
+        .jq-selectbox__select-text {
+            width: 130px;
+        }
+
+        .jq-selectbox li {
+            width: 130px;
+        }
+    }
+
+    &:last-child {
+        .jq-selectbox__select-text {
+            width: 180px;
+        }
+
+        .jq-selectbox li {
+            width: 180px;
+        }
     }
 }
 
 //end modal select======================================================================================
 
+// packages-item======================================================================================
 .packages-item {
     flex-basis: calc(25% - 10px);
     padding: 15px 20px 20px;
@@ -1130,3 +1343,239 @@ button {
         @include a600;
     }
 }
+
+//end packages-item======================================================================================
+// sp-offer======================================================================================
+
+.sp-offer {
+    padding-bottom: 100px;
+
+    &__title {
+        margin: 10px 0 20px;
+    }
+
+    &__text {
+        max-width: 1152px;
+        margin-bottom: 25px;
+        line-height: 21px;
+        color: #575757;
+    }
+
+    &__notice {
+        padding: 20px 42px;
+        margin-bottom: 25px;
+    }
+
+    &__inner {
+        margin-bottom: 40px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #e2e2e2;
+
+        &--title {
+            padding-bottom: 15px;
+            margin-bottom: 5px;
+            border-bottom: 2px solid #141414;
+        }
+    }
+
+    &__title-name {
+        width: 16.666666667%;
+        font-size: 16px;
+        line-height: 22.4px;
+        @include a700;
+    }
+
+    &__content {
+        position: relative;
+        padding: 10px 10px 10px 0;
+        width: 16.666666667%;
+        font-size: 13px;
+        color: #575757;
+
+        &--bold {
+            display: block;
+            font-size: 15px;
+            line-height: 21px;
+            @include a600;
+            color: #141414;
+        }
+
+        &--transparent,
+        &--white {
+            padding-left: 30px;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                background-image: url(../images/round-crossed.svg);
+                width: 20px;
+                height: 20px;
+                content: '';
+            }
+        }
+
+        &--white::before {
+            background-image: url(../images/round.svg);
+        }
+
+        &--blue {
+            font-size: 16px;
+            line-height: 22.4px;
+            @include a700;
+            color: $blue;
+        }
+
+        &--crossed {
+            text-decoration: line-through;
+        }
+    }
+}
+
+//end sp-offer======================================================================================
+// contact======================================================================================
+
+.contact {
+    &__title {
+        margin: 10px 0 20px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__info {
+        width: 100%;
+        max-width: 740px;
+        padding-right: 20px;
+    }
+
+    &__address {
+        font-style: normal;
+    }
+
+    &__row {
+        display: flex;
+        padding: 15px 0;
+        font-size: 16px;
+        @include a700;
+        line-height: 22.4px;
+        color: #575757;
+
+        &+& {
+            border-top: 1px solid #e2e2e2;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 195px;
+        color: #141414;
+    }
+
+    &__link {
+        color: $blue;
+    }
+
+    &__img-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 386px;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        max-width: 188px;
+    }
+}
+
+//end contact======================================================================================
+// map======================================================================================
+.map {
+    padding: 45px 0 90px;
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
+}
+
+//end map======================================================================================
+// requisites======================================================================================
+
+.requisites {
+    padding: 45px 0;
+    background-color: #f5f5f5;
+
+    &__title-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        border-bottom: 2px solid #141414;
+    }
+
+    &__title {
+        font-size: 16px;
+        @include a700;
+    }
+
+    &__download {
+        position: relative;
+        padding-right: 15px;
+        font-size: 16px;
+        @include a600;
+        color: $blue;
+
+        &::before {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            content: '';
+            background-image: url(../images/arrowDown.svg);
+            @include img;
+            width: 10px;
+            height: 12px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__list-wrapper {
+        width: 50%;
+
+        &+& {
+            margin-left: 45px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        padding: 10px 0;
+        font-size: 13px;
+        color: #575757;
+
+        &+& {
+            border-top: 1px solid #e2e2e2;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        width: 100%;
+        max-width: 188px;
+        font-size: 15px;
+        color: #141414;
+    }
+}
+
+//end requisites======================================================================================

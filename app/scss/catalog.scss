@@ -1,5 +1,6 @@
 @import "fonts";
 @import "vars";
+@import "keyframes";
 @import "global";
 
 //start header===================================================================================
@@ -33,8 +34,8 @@
 
 // products-choice=====================================================================================
 .products-choice {
-    margin-top: 9px;
     padding-bottom: 109px;
+    margin-top: 9px;
 
     &__inner {
         display: flex;
@@ -74,8 +75,9 @@
     }
 
     &__title {
-        font-size: 16px;
+        padding: 0 15px;
         margin-top: auto;
+        font-size: 16px;
     }
 
     &__text {
@@ -86,7 +88,6 @@
 }
 
 //end card===================================================================================
-
 
 //start benefits================================================================================
 .benefits {
@@ -110,9 +111,9 @@
 
         &::before {
             position: absolute;
-            content: '';
             top: 0;
             left: 0;
+            content: '';
         }
 
         &--triangle::before {
@@ -160,9 +161,9 @@
     background-position: center;
     background-size: cover;
 
-
     &__inner {
         display: flex;
+        align-items: flex-start;
     }
 
     &__wrapper-img {
@@ -221,6 +222,23 @@
 .benefits-choice {
     padding: 100px 0 110px;
 }
+
 //end choice=====================================================================================
 
 @import "media";
+
+@media (max-width: 768px) {
+    .header__list--active {
+        transform: translateX(-15px);
+    }
+
+    .header__calculating {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__list--active {
+        width: 110%;
+    }
+}

@@ -6,7 +6,7 @@
 
 <body>
     <!-- header -->
-    <header class="header header--increased">
+    <header class="header header--increased" id="start">
         <div class="container">
             <div class="header__top">
                 <form class="header__form search">
@@ -37,7 +37,7 @@
                         <img class="search__close" src="images/close.svg" alt="close">
                     </button>
                 </form>
-                <a class="header__logo logo" href="">
+                <a class="header__logo logo" href="index.html">
                     <img class="logo__img" src="images/logo.png" alt="logo">
                 </a>
                 <div class="header__address">
@@ -77,12 +77,17 @@
                             fill="#485BFA" />
                     </svg>
                 </button>
+                <div class="dropdown-menu">
+                    <div class="dropdown-menu__inner">
+
+                    </div>
+                </div>
             </div>
             <div class="header__center">
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__list-item">
-                            <a class="header__link" href="#">
+                            <a class="header__link anchor" href="catalog.html">
                                 <svg width="12" height="11" viewBox="0 0 12 11" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect class="header__icon" x="0.015625" width="4" height="4" fill="#141414" />
@@ -93,11 +98,16 @@
                                 Продукция
                             </a>
                         </li>
-                        <li class="header__list-item"><a class="header__link" href="#">О компании</a></li>
-                        <li class="header__list-item"><a class="header__link" href="#">Производство</a></li>
-                        <li class="header__list-item"><a class="header__link" href="#">Как выбрать?</a></li>
-                        <li class="header__list-item"><a class="header__link" href="#">Новости</a></li>
-                        <li class="header__list-item"><a class="header__link" href="#">Контакты</a></li>
+                        <li class="header__list-item"><a class="header__link anchor" href="index.html#about">О
+                                компании</a></li>
+                        <li class="header__list-item"><a class="header__link anchor"
+                                href="index.html#production">Производство</a></li>
+                        <li class="header__list-item"><a class="header__link anchor" href="catalog.html#choice">Как
+                                выбрать?</a></li>
+                        <li class="header__list-item"><a class="header__link anchor" href="index.html#news">Новости</a>
+                        </li>
+                        <li class="header__list-item"><a class="header__link anchor" href="contact.html">Контакты</a>
+                        </li>
                     </ul>
                 </nav>
 
@@ -115,10 +125,10 @@
             <!-- breadcrumbs -->
             <div class="header__breadcrumbs breadcrumbs">
                 <div class="container">
-                    <a class="breadcrumbs__text" href="#">
+                    <a class="breadcrumbs__text" href="index.html">
                         Главная
                     </a>
-                    <a class="breadcrumbs__text" href="#">
+                    <a class="breadcrumbs__text" href="catalog.html">
                         Продукция
                     </a>
                     <span class="breadcrumbs__text">
@@ -130,7 +140,7 @@
             <div class="header__bottom header__bottom--increased">
                 <img class="header__img header__img--center" src="images/content/med.png" alt="Пакеты для медотходов">
                 <div class="header__desc">
-                    <h1 class="header__title">
+                    <h1 class="header__title title">
                         Пакеты для медотходов
                     </h1>
                     <div class="header__cost">
@@ -141,7 +151,7 @@
                             </span>
                             <img class="cost__img" src="images/cost-bg.svg" alt="cost-bg">
                         </div>
-                        <div class="header__btn-wrapper">
+                        <div class="cost__btn-wrapper">
                             <button class="btn-modal btn-link">
                                 Сделать заказ
                             </button>
@@ -151,6 +161,7 @@
                             </button>
                         </div>
                     </div>
+                    <img class="header__img header__img--off" src="images/content/med.png" alt="Пакеты для медотходов">
                     <div class="header__table-title">
                         Основные параметры
                     </div>
@@ -268,7 +279,8 @@
                         </span>
                     </div>
                     <div class="header__notice notice">
-                        Минимальный заказ на изготовление – от 100 кг. Типовые пакеты для медотходов есть в наличии на складе, минимальный заказ – от 1 упаковки.
+                        Минимальный заказ на изготовление – от 100 кг. Типовые пакеты для медотходов есть в наличии на
+                        складе, минимальный заказ – от 1 упаковки.
                     </div>
                 </div>
             </div>
@@ -282,7 +294,7 @@
             <div class="container">
                 <div class="logo-order__inner">
                     <div class="logo-order__desc">
-                        <h2 class="logo-order__title title">
+                        <h2 class="title">
                             изготовим пакеты «Майка» с логотипом в сжатые сроки за демократичную цену
                         </h2>
                         <p class="logo-order__text">
@@ -301,6 +313,15 @@
                                 Возможно изготовление без нанесения рисунка
                             </li>
                         </ul>
+                        <div class="logo-order__wrapper-img logo-order__wrapper-img--off">
+                            <img class="logo-order__img logo-order__img--large"
+                                src="images/content/product-packages-1.jpg" alt="packages-1">
+                            <img class="logo-order__img" src="images/content/product-packages-2.jpg" alt="packages-2">
+                            <img class="logo-order__img" src="images/content/product-packages-3.jpg" alt="packages-3">
+                            <img class="logo-order__img" src="images/content/product-packages-4.jpg" alt="packages-4">
+                            <img class="logo-order__img" src="images/content/product-packages-5.jpg" alt="packages-5">
+                            <img class="logo-order__img" src="images/content/product-packages-6.jpg" alt="packages-6">
+                        </div>
                         <div class="logo-order__wrapper-btn">
                             <button class="logo-order__calculating btn-calc">
                                 Расчёт стоимости
@@ -326,9 +347,9 @@
         <!-- shirt -->
         <section class="shirt">
             <div class="container">
-                <h4 class="title">
-                    <div class="title__inner">
-                        <a class="title--blue" href="#">
+                <h4 class="shirt__title title">
+                    <span class="title__inner">
+                        <a class="title--blue" href="typical.html">
                             типовые пакеты
 
                         </a>
@@ -338,7 +359,7 @@
                                 d="M0.292893 10.2929C-0.0976311 10.6834 -0.0976311 11.3166 0.292893 11.7071C0.683417 12.0976 1.31658 12.0976 1.70711 11.7071L0.292893 10.2929ZM12 1C12 0.447715 11.5523 0 11 0H2C1.44772 0 1 0.447715 1 1C1 1.55228 1.44772 2 2 2H10V10C10 10.5523 10.4477 11 11 11C11.5523 11 12 10.5523 12 10V1ZM1.70711 11.7071L6.36228 7.05193L4.94807 5.63772L0.292893 10.2929L1.70711 11.7071ZM6.36228 7.05193L11.7071 1.70711L10.2929 0.292893L4.94807 5.63772L6.36228 7.05193Z"
                                 fill="#485BFA" />
                         </svg>
-                    </div>
+                    </span>
                     «Майка»
                 </h4>
                 <div class="swiper-container">
@@ -715,12 +736,21 @@
                         </div>
                     </div>
                     <form class="application__form">
+                        <div class="application__notification">
+                            Ваша заявка отправлена и находится в обработке.
+                            Наш специалист свяжется с вами в ближайшее время.
+                        </div>
+                        <!-- ===================================================Hidden Required Fields========================================= -->
+                        <input type="hidden" name="project_name" value="Europlast">
+                        <input type="hidden" name="admin_email" value="voda-111@yandex.ru">
+                        <input type="hidden" name="form_subject" value="CalcForm">
+                        <!-- ===================================================END Hidden Required Fields===================================== -->
                         <input class="application__input input" type="text" name="Name" placeholder="Имя"
                             autocomplete="off">
                         <input class="application__input input" type="text" name="Contact"
                             placeholder="Телефон или e-mail" autocomplete="off">
-                        <input class="checkbox" type="checkbox" id="feedCheck">
-                        <label class="checkbox-label checkbox-label--white" for="feedCheck">
+                        <input class="checkbox" type="checkbox" id="applicationCheck">
+                        <label class="checkbox-label checkbox-label--white" for="applicationCheck">
                             Нажимая на кнопку "отправить", вы соглашаетесь на обработку персональных данных в
                             соответствии с <a class="link-modal link-modal--orange" href="#"> политикой
                                 конфиденциальности.</a>
@@ -742,7 +772,7 @@
                             Высокий уровень обслуживания и индивидуальный подход к каждому клиенту — часть нашего
                             сервиса
                         </h4>
-                        <a class="service__link" href="#">
+                        <a class="service__link" href="catalog.html#choice">
                             Как выбрать пакеты?
                         </a>
                     </div>
@@ -793,10 +823,10 @@
         <section class="products">
             <div class="container">
 
-                <h4 class="title">
+                <h4 class="products__title title">
                     Основная
-                    <div class="title__inner">
-                        <a class="title--blue" href="#">
+                    <span class="title__inner">
+                        <a class="title--blue" href="catalog.html">
                             продукция
 
                         </a>
@@ -806,78 +836,78 @@
                                 d="M0.292893 10.2929C-0.0976311 10.6834 -0.0976311 11.3166 0.292893 11.7071C0.683417 12.0976 1.31658 12.0976 1.70711 11.7071L0.292893 10.2929ZM12 1C12 0.447715 11.5523 0 11 0H2C1.44772 0 1 0.447715 1 1C1 1.55228 1.44772 2 2 2H10V10C10 10.5523 10.4477 11 11 11C11.5523 11 12 10.5523 12 10V1ZM1.70711 11.7071L6.36228 7.05193L4.94807 5.63772L0.292893 10.2929L1.70711 11.7071ZM6.36228 7.05193L11.7071 1.70711L10.2929 0.292893L4.94807 5.63772L6.36228 7.05193Z"
                                 fill="#485BFA" />
                         </svg>
-                    </div>
+                    </span>
                     компании
                 </h4>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="page2-film.html">
                             <img class="card__img" src="images/content/package-1.png" alt="Полиэтиленовая пленка">
                             <h6 class="card__title">
                                 Полиэтиленовая пленка
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="page1-shirtBag.html">
                             <img class="card__img" src="images/content/package-2.png" alt="Пакеты «Майка»">
                             <h6 class="card__title">
                                 Пакеты «Майка»
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="page3-handle.html">
                             <img class="card__img" src="images/content/package-3.png" alt="Пакеты с прорубной ручкой">
                             <h6 class="card__title">
                                 Пакеты с прорубной ручкой
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="page4-cellophane.html">
                             <img class="card__img" src="images/content/package-4.png" alt="Фасовочные пакеты">
                             <h6 class="card__title">
                                 Фасовочные пакеты
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="page5-tire.html">
                             <img class="card__img" src="images/content/package-5.png" alt="Пакеты для колес">
                             <h6 class="card__title">
                                 Пакеты для колес
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="page6-garbage.html">
                             <img class="card__img" src="images/content/package-6.png" alt="Мешки для мусора">
                             <h6 class="card__title">
                                 Мешки для мусора
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="page7-med.html">
                             <img class="card__img" src="images/content/package-7.png" alt="Пакеты для медотходов">
                             <h6 class="card__title">
                                 Пакеты для медотходов
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="page8-liners.html">
                             <img class="card__img" src="images/content/package-8.png" alt="Вкладыши в короба">
                             <h6 class="card__title">
                                 Вкладыши в короба
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="page9-clothes.html">
                             <img class="card__img" src="images/content/package-9.png" alt="Пакеты для хранения одежды">
                             <h6 class="card__title">
                                 Пакеты для хранения одежды
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="page10-perforation.html">
                             <img class="card__img" src="images/content/package-10.png" alt="Пакеты с перфорацией">
                             <h6 class="card__title">
                                 Пакеты с перфорацией
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="typical.html">
                             <img class="card__img" src="images/content/package-11.png" alt="Типовые пакеты">
                             <h6 class="card__title">
                                 Типовые пакеты
                             </h6>
                         </a>
-                        <a class="swiper-slide card" href="#">
+                        <a class="swiper-slide card" href="offer.html">
                             <div class="card__text">%</div>
                             <h6 class="card__title">
                                 Спецпредложения
@@ -909,8 +939,8 @@
         <section class="offer">
             <div class="container">
                 <h4 class="offer__title title">
-                    <div class="title__inner">
-                        <a class="title--blue" href="#">
+                    <span class="title__inner">
+                        <a class="title--blue" href="offer.html">
                             спецпредложения
                         </a>
                         <svg class="title__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -919,7 +949,7 @@
                                 d="M0.292893 10.2929C-0.0976311 10.6834 -0.0976311 11.3166 0.292893 11.7071C0.683417 12.0976 1.31658 12.0976 1.70711 11.7071L0.292893 10.2929ZM12 1C12 0.447715 11.5523 0 11 0H2C1.44772 0 1 0.447715 1 1C1 1.55228 1.44772 2 2 2H10V10C10 10.5523 10.4477 11 11 11C11.5523 11 12 10.5523 12 10V1ZM1.70711 11.7071L6.36228 7.05193L4.94807 5.63772L0.292893 10.2929L1.70711 11.7071ZM6.36228 7.05193L11.7071 1.70711L10.2929 0.292893L4.94807 5.63772L6.36228 7.05193Z"
                                 fill="#485BFA" />
                         </svg>
-                    </div>
+                    </span>
                     компании
                 </h4>
                 <div class="offer__inner">
@@ -963,6 +993,7 @@
     @@include('../components/_footer.html')
 
     @@include('../components/_scripts.html')
+    <script src="min.js/product.min.js"></script>
 </body>
 
 </html>

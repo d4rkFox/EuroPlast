@@ -6,7 +6,8 @@
 
 <body>
     <!-- start header -->
-    <header class="header header--changed">
+
+    <header class="header header--changed" id="start">
 
         <div class="container">
             <div class="header__top">
@@ -38,7 +39,7 @@
                         <img class="search__close" src="images/close.svg" alt="close">
                     </button>
                 </form>
-                <a class="header__logo logo" href="">
+                <a class="header__logo logo" href="index.html">
                     <img class="logo__img" src="images/logo.png" alt="logo">
                 </a>
                 <div class="header__address">
@@ -78,12 +79,17 @@
                             fill="#485BFA" />
                     </svg>
                 </button>
+                <div class="dropdown-menu">
+                    <div class="dropdown-menu__inner">
+
+                    </div>
+                </div>
             </div>
             <div class="header__center">
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__list-item">
-                            <a class="header__link" href="#">
+                            <a class="header__link anchor" href="catalog.html">
                                 <svg width="12" height="11" viewBox="0 0 12 11" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect class="header__icon" x="0.015625" width="4" height="4" fill="#141414" />
@@ -94,11 +100,11 @@
                                 Продукция
                             </a>
                         </li>
-                        <li class="header__list-item"><a class="header__link" href="#">О компании</a></li>
-                        <li class="header__list-item"><a class="header__link" href="#">Производство</a></li>
-                        <li class="header__list-item"><a class="header__link" href="#">Как выбрать?</a></li>
-                        <li class="header__list-item"><a class="header__link" href="#">Новости</a></li>
-                        <li class="header__list-item"><a class="header__link" href="#">Контакты</a></li>
+                        <li class="header__list-item"><a class="header__link anchor" href="index.html#about">О компании</a></li>
+                        <li class="header__list-item"><a class="header__link anchor" href="index.html#production">Производство</a></li>
+                        <li class="header__list-item"><a class="header__link anchor" href="catalog.html#choice">Как выбрать?</a></li>
+                        <li class="header__list-item"><a class="header__link anchor" href="index.html#news">Новости</a></li>
+                        <li class="header__list-item"><a class="header__link anchor" href="contact.html">Контакты</a></li>
                     </ul>
                 </nav>
 
@@ -115,11 +121,10 @@
             </div>
             <!-- breadcrumbs -->
             <div class="header__breadcrumbs breadcrumbs">
-
-                <a class="breadcrumbs__text" href="#">
+                <a class="breadcrumbs__text" href="index.html">
                     Главная
                 </a>
-                <a class="breadcrumbs__text" href="#">
+                <a class="breadcrumbs__text" href="catalog.html">
                     Продукция
                 </a>
                 <span class="breadcrumbs__text">
@@ -131,7 +136,7 @@
             <div class="header__bottom">
                 <img class="header__img" src="images/packages-1.png" alt="package">
                 <div class="header__desc">
-                    <h1 class="header__title">
+                    <h1 class="header__title title">
                         Пакеты с готовой печатью <br> в наличии в санкт-петербурге
                     </h1>
                     <div class="header__subtitle">
@@ -370,7 +375,8 @@
                         </div>
 
                         <div class="packages-item">
-                            <img class="packages-item__img" src="images/content/item-6.png" alt="«Бонус Маркет» (собака)">
+                            <img class="packages-item__img" src="images/content/item-6.png"
+                                alt="«Бонус Маркет» (собака)">
                             <h5 class="packages-item__title">
                                 «Бонус Маркет» (собака)
                             </h5>
@@ -1401,9 +1407,11 @@
         </section>
 
     </main>
+
     @@include('../components/_footer.html')
 
     @@include('../components/_scripts.html')
+    <script src="min.js/typical.min.js"></script>
 </body>
 
 </html>

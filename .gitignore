@@ -7,6 +7,7 @@ app/js/*min.js
 app/*.html
 css/
 dist/
+plugins/
 node_modules/
 package-lock.json
 yarn.lock

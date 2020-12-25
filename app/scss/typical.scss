@@ -1,5 +1,6 @@
 @import "fonts";
 @import "vars";
+@import "keyframes";
 @import "global";
 
 //start header===================================================================================
@@ -12,6 +13,8 @@
 
 .packages {
     padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
 
     &__title {
         padding-bottom: 8px;
@@ -25,19 +28,16 @@
     &__inner {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 50px;
         margin-left: -10px;
         text-align: center;
     }
 
     &__box {
-        height: 100%;
-        transition: transform 0.3s, opacity 0.3s, height 0.3s;
+        transition: transform 1s, opacity 1s, height 1s;
 
         &--disable {
-            transform: rotate(0deg) translateX(100%) scale(0);
             opacity: 0;
-            height: 0;
+            transform: rotate(135deg) translateX(100%) scale(0);
         }
     }
 }
@@ -72,3 +72,19 @@
 //end sort=====================================================================================
 
 @import "media";
+
+@media (max-width: 768px) {
+    .header__list--active {
+        transform: translateX(-15px);
+    }
+
+    .header__calculating {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__list--active {
+        width: 110%;
+    }
+}

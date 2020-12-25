@@ -33,35 +33,48 @@ function html() {
 }
 
 function scripts() {
-    return src("app/js/main.js")
-        .pipe(babel())
-        .pipe(concat("main.min.js"))
-        // .pipe(uglify())
-        .pipe(dest("app/js"))
-        .pipe(browserSync.stream());
+    return (
+        src("app/js/*.js")
+            .pipe(babel())
+            .pipe(
+                rename({
+                    suffix: ".min",
+                    extname: ".js",
+                })
+            )
+            // .pipe(concat("main.min.js"))
+            .pipe(uglify())
+            .pipe(dest("app/min.js"))
+            .pipe(browserSync.stream())
+    );
 }
 
 function libsJs() {
-    return src(["node_modules/swiper/swiper-bundle.js"])
+    return src([
+        "node_modules/swiper/swiper-bundle.js",
+        "plugins/jquery.formstyler.js",
+    ])
         .pipe(babel())
         .pipe(concat("libs.min.js"))
         .pipe(uglify())
-        .pipe(dest("app/js"));
+        .pipe(dest("app/min.js"));
 }
 
 function styles() {
     return src("app/scss/*.scss")
-        .pipe(scss({ outputStyle: "expanded" }))
+        .pipe(scss({ outputStyle: "compressed" }))
         .pipe(
             autoprefixer({
                 overrideBrowserslist: ["last 10 version"],
                 grid: true,
             })
         )
-        .pipe(rename({
-            suffix: ".min",
-            extname: ".css"
-        }))
+        .pipe(
+            rename({
+                suffix: ".min",
+                extname: ".css",
+            })
+        )
         .pipe(dest("app/css"))
         .pipe(browserSync.stream());
 }
@@ -70,6 +83,7 @@ function libsCss() {
     return src([
         "node_modules/normalize.css/normalize.css",
         "node_modules/swiper/swiper-bundle.css",
+        "plugins/jquery.formstyler.css",
     ])
         .pipe(cssmin())
         .pipe(concat("libs.min.css"))
@@ -91,7 +105,17 @@ function lintCss() {
 
 function build() {
     return src(
-        ["app/css/*min.css", "app/fonts/**/*", "app/js/*min.js", "app/*.html"],
+        [
+            "app/css/*min.css",
+            "app/fonts/**/*",
+            "app/min.js/*min.js",
+            "app/*.html",
+            "app/*.php",
+            "app/.htaccess",
+            "app/*.ico",
+            "app/*.docx",
+            
+        ],
         { base: "app" }
     ).pipe(dest("dist"));
 }
@@ -130,4 +154,11 @@ exports.cleanDist = cleanDist;
 exports.lintCss = lintCss;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, libsCss, libsJs, scripts, browsersync, watching);
+exports.default = parallel(
+    styles,
+    libsCss,
+    libsJs,
+    scripts,
+    browsersync,
+    watching
+);

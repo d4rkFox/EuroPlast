@@ -1,13 +1,52 @@
-@keyframes arrowUp {
+@keyframes height {
     from {
-
+        height: 100%;
     }
 
     50% {
-
+        height: 0;
     }
 
     to {
+        height: 100%;
+    }
+}
 
+@keyframes shake {
+    from {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveButtonReturnStart {
+    from {
+        left: 70%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    to {
+        left: 30%;
+        opacity: 0;
     }
 }
